@@ -15,13 +15,14 @@
         ],
         "classpath": [
             "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.12.3/circe-parser_2.12-0.12.3.jar",
+            "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar",
             "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar",
-            "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/2.0.0/cats-macros_2.12-2.0.0.jar",
+            "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar",
+            "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar",
             "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-parser_2.12/0.14.2/jawn-parser_2.12-0.14.2.jar",
             "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.12.3/circe-numbers_2.12-0.12.3.jar",
-            "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/2.0.0/cats-kernel_2.12-2.0.0.jar",
             "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.12.3/circe-generic_2.12-0.12.3.jar",
-            "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.12/2.0.0/cats-core_2.12-2.0.0.jar",
+            "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar",
             "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.12.3/circe-jawn_2.12-0.12.3.jar",
             "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-core_2.12/0.12.3/circe-core_2.12-0.12.3.jar",
             "/Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-library.jar",
@@ -135,6 +136,23 @@
                 },
                 {
                     "organization": "org.typelevel",
+                    "name": "cats-macros_2.12",
+                    "version": "2.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "cats-macros_2.12",
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar"
+                        },
+                        {
+                            "name": "cats-macros_2.12",
+                            "classifier": "sources",
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.typelevel",
                     "name": "macro-compat_2.12",
                     "version": "1.1.1",
                     "configurations": "default",
@@ -156,18 +174,35 @@
                 },
                 {
                     "organization": "org.typelevel",
-                    "name": "cats-macros_2.12",
-                    "version": "2.0.0",
+                    "name": "cats-core_2.12",
+                    "version": "2.1.1",
                     "configurations": "default",
                     "artifacts": [
                         {
-                            "name": "cats-macros_2.12",
-                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/2.0.0/cats-macros_2.12-2.0.0.jar"
+                            "name": "cats-core_2.12",
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar"
                         },
                         {
-                            "name": "cats-macros_2.12",
+                            "name": "cats-core_2.12",
                             "classifier": "sources",
-                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/2.0.0/cats-macros_2.12-2.0.0-sources.jar"
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.typelevel",
+                    "name": "cats-effect_2.12",
+                    "version": "2.1.3",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "cats-effect_2.12",
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar"
+                        },
+                        {
+                            "name": "cats-effect_2.12",
+                            "classifier": "sources",
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3-sources.jar"
                         }
                     ]
                 },
@@ -206,23 +241,6 @@
                     ]
                 },
                 {
-                    "organization": "org.typelevel",
-                    "name": "cats-kernel_2.12",
-                    "version": "2.0.0",
-                    "configurations": "default",
-                    "artifacts": [
-                        {
-                            "name": "cats-kernel_2.12",
-                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/2.0.0/cats-kernel_2.12-2.0.0.jar"
-                        },
-                        {
-                            "name": "cats-kernel_2.12",
-                            "classifier": "sources",
-                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/2.0.0/cats-kernel_2.12-2.0.0-sources.jar"
-                        }
-                    ]
-                },
-                {
                     "organization": "io.circe",
                     "name": "circe-generic_2.12",
                     "version": "0.12.3",
@@ -241,18 +259,18 @@
                 },
                 {
                     "organization": "org.typelevel",
-                    "name": "cats-core_2.12",
-                    "version": "2.0.0",
+                    "name": "cats-kernel_2.12",
+                    "version": "2.1.1",
                     "configurations": "default",
                     "artifacts": [
                         {
-                            "name": "cats-core_2.12",
-                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.12/2.0.0/cats-core_2.12-2.0.0.jar"
+                            "name": "cats-kernel_2.12",
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar"
                         },
                         {
-                            "name": "cats-core_2.12",
+                            "name": "cats-kernel_2.12",
                             "classifier": "sources",
-                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.12/2.0.0/cats-core_2.12-2.0.0-sources.jar"
+                            "path": "/Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1-sources.jar"
                         }
                     ]
                 },

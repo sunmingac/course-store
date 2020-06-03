@@ -739,3 +739,182 @@ Starting thread that pumps server stdout and redirects it to the client stdout..
 2020.06.03 18:26:43 INFO  compiling course-store (2 scala sources)
 2020.06.03 18:26:52 WARN  there was one feature warning; re-run with -feature for details
 2020.06.03 18:26:52 INFO  time: compiled course-store in 9.92s
+2020.06.03 18:30:16 INFO  shutting down Metals
+No more data in the client stdin, exiting...
+2020.06.03 18:33:44 INFO  started: Metals version 0.9.0 in workspace '/Users/kidaneweldemariam/code/playground/course-store'
+2020.06.03 18:33:45 INFO  time: initialize in 1.68s
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher1898582798792602116/bsp.socket'...
+Waiting for the bsp connection to come up...
+2020.06.03 18:33:48 INFO  skipping build import with status 'Installed'
+2020.06.03 18:33:48 INFO  no build target: using presentation compiler with only scala-library
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher1898582798792602116/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher1898582798792602116/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.03 18:33:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.03 18:33:49 INFO  time: connected to build server in 1.34s
+2020.06.03 18:33:49 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.03 18:33:49 INFO  time: imported build in 0.43s
+2020.06.03 18:33:57 INFO  time: indexed workspace in 8.05s
+Jun 03, 2020 6:33:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 317)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 318)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 311)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 312)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 313)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 314)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 316)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 316)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 316)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 299, 299, 316)
+2020.06.03 18:39:22 INFO  compiling course-store (1 scala source)
+2020.06.03 18:39:24 INFO  time: compiled course-store in 1.88s
+2020.06.03 18:39:24 INFO  compiling course-store (1 scala source)
+2020.06.03 18:39:26 INFO  time: compiled course-store in 1.39s
+Jun 03, 2020 6:39:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 329
+Jun 03, 2020 6:40:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 346
+Jun 03, 2020 6:40:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 347
+2020.06.03 18:40:14 INFO  compiling course-store (1 scala source)
+Jun 03, 2020 6:40:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 376
+2020.06.03 18:40:19 INFO  time: compiled course-store in 5.15s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in repository.CourseRepo[F]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 353, 353, 366)
+2020.06.03 18:41:18 INFO  compiling course-store (1 scala source)
+2020.06.03 18:41:18 INFO  time: compiled course-store in 0.99s
+2020.06.03 18:42:54 INFO  compiling course-store (1 scala source)
+2020.06.03 18:42:54 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals2131631410867309966/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.03 18:42:54 INFO  time: compiled course-store in 0.47s
+2020.06.03 18:43:00 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.03 18:43:02 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.03 18:43:02 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.03 18:43:05 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.03 18:43:05 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.03 18:43:08 INFO  [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+2020.06.03 18:43:08 INFO  [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+2020.06.03 18:43:08 INFO  [success] Generated .bloop/course-store.json
+2020.06.03 18:43:08 INFO  [success] Generated .bloop/course-store-test.json
+2020.06.03 18:43:08 INFO  [success] Total time: 3 s, completed 03-Jun-2020 18:43:09
+2020.06.03 18:43:09 INFO  time: ran 'sbt bloopInstall' in 15s
+2020.06.03 18:43:08 INFO  build tool exit: 0
+2020.06.03 18:43:09 INFO  disconnected: build server
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher8726484220528098626/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/Users/kidaneweldemariam/code/playground/course-store/.bloop'...
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store.json'
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store-test.json'
+[0m[32m[D][0m Configured SemanticDB in projects 'course-store', 'course-store-test'
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher8726484220528098626/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher8726484220528098626/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.03 18:43:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.03 18:43:09 INFO  time: connected to build server in 0.12s
+2020.06.03 18:43:09 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.03 18:43:09 INFO  time: indexed workspace in 0.87s
+2020.06.03 18:43:10 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:43:10 INFO  time: compiled course-store in 0.2s
+Jun 03, 2020 6:43:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 770
+Jun 03, 2020 6:44:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 816
+Jun 03, 2020 6:44:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 817
+Jun 03, 2020 6:44:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 818
+2020.06.03 18:44:16 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:44:18 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:44:18 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in repository.CourseRepo[F]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 430, 430, 443)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in repository.CourseRepo[F]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 430, 430, 443)
+2020.06.03 18:44:27 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:46:30 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:46:33 INFO  time: compiled course-store in 2.55s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in cats.effect.Sync[F]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 413, 413, 420)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in cats.effect.Sync[F]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 413, 413, 420)
+Jun 03, 2020 6:47:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1188
+2020.06.03 18:47:35 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:47:40 INFO  time: compiled course-store in 4.99s
+2020.06.03 18:48:56 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:48:57 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:48:57 INFO  time: compiled course-store in 0.82s
+2020.06.03 18:49:40 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:49:48 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:49:48 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:49:53 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:49:53 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:49:53 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 390, 390, 407)
+2020.06.03 18:50:13 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 390, 390, 407)
+2020.06.03 18:50:13 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 390, 390, 407)
+2020.06.03 18:50:16 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:50:16 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:50:16 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:50:19 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:50:19 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:50:35 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:50:37 INFO  time: compiled course-store in 1.3s
+2020.06.03 18:52:02 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:52:02 INFO  time: compiled course-store in 0.13s
+2020.06.03 18:52:29 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:53:01 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:53:05 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:53:31 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:53:33 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 18:53:33 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 391, 391, 408)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 391, 391, 408)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 391, 391, 408)
+Jun 03, 2020 6:54:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2088
+2020.06.03 18:55:45 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:55:46 INFO  time: compiled course-store in 1.11s
+Jun 03, 2020 6:58:32 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: String index out of range: -2
+java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.<init>(String.java:196)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:369)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:368)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 390, 390, 407)
+2020.06.03 19:04:11 ERROR code navigation does not work for the file '/Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala' because the SemanticDB file '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store/bloop-bsp-clients-classes/classes-Metals-LVZq-o7WS2e-_7GDSDBxGA==/META-INF/semanticdb/src/main/scala/repository/CourseRepos.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2020.06.03 19:04:30 INFO  compiling course-store (2 scala sources)
+2020.06.03 19:04:30 INFO  time: compiled course-store in 0.97s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 426, 426, 443)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 426, 426, 443)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 426, 426, 443)
+2020.06.03 19:06:29 INFO  compiling course-store (2 scala sources)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 426, 426, 443)
+2020.06.03 19:06:32 INFO  time: compiled course-store in 2.36s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 426, 426, 443)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 426, 426, 443)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 426, 426, 443)
+2020.06.03 19:08:09 INFO  compiling course-store (2 scala sources)
+2020.06.03 19:08:09 INFO  time: compiled course-store in 0.61s
+2020.06.03 19:09:52 INFO  compiling course-store (2 scala sources)
+2020.06.03 19:09:52 INFO  time: compiled course-store in 0.47s
+2020.06.03 19:11:02 INFO  compiling course-store (2 scala sources)
+2020.06.03 19:11:02 INFO  time: compiled course-store in 0.47s
+2020.06.03 19:11:49 INFO  compiling course-store (2 scala sources)
+2020.06.03 19:11:49 INFO  time: compiled course-store in 0.45s

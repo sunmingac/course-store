@@ -1,0 +1,4 @@
+[debug] [course-store-test] Classpath dependencies List()
+[debug] [course-store-test] Dependencies from configurations List(course-store)
+[debug] Bloop wrote the configuration of project 'course-store-test' to '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store-test.json'
+[success] Generated .bloop/course-store-test.json

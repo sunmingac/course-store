@@ -1,0 +1,741 @@
+2020.06.03 17:52:42 INFO  started: Metals version 0.9.0 in workspace '/Users/kidaneweldemariam/code/playground/course-store'
+2020.06.03 17:52:42 INFO  time: initialize in 0.44s
+Jun 03, 2020 5:52:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "initialized",
+  "params": {}
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.NumberFormatException: For input string: "<unknown>"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike.toInt(StringLike.scala:304)
+	at scala.collection.immutable.StringLike.toInt$(StringLike.scala:304)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:33)
+	at scala.meta.internal.semver.SemVer$Version$.$anonfun$fromString$1(SemVer.scala:18)
+	at scala.meta.internal.semver.SemVer$Version$.$anonfun$fromString$1$adapted(SemVer.scala:18)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:273)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:273)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:266)
+	at scala.collection.mutable.ArrayOps$ofRef.map(ArrayOps.scala:198)
+	at scala.meta.internal.semver.SemVer$Version$.fromString(SemVer.scala:18)
+	at scala.meta.internal.semver.SemVer$.isCompatibleVersion(SemVer.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.supportedBuildTool(MetalsLanguageServer.scala:1408)
+	at scala.meta.internal.metals.MetalsLanguageServer.slowConnectToBuildServer(MetalsLanguageServer.scala:1429)
+	at scala.meta.internal.metals.MetalsLanguageServer.initialized(MetalsLanguageServer.scala:648)
+	... 16 more
+
+2020.06.03 17:52:43 INFO  no build target: using presentation compiler with only scala-library
+2020.06.03 17:54:18 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals1345291426815878098/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.03 17:55:09 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.03 17:55:24 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.03 17:55:24 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.03 17:55:38 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.03 17:55:39 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.03 17:55:42 INFO  [success] Generated .bloop/course-store.json
+2020.06.03 17:55:42 INFO  [success] Generated .bloop/course-store-test.json
+2020.06.03 17:55:42 INFO  [success] Total time: 2 s, completed 03-Jun-2020 17:55:42
+2020.06.03 17:55:42 INFO  build tool exit: 0
+2020.06.03 17:55:43 INFO  time: ran 'sbt bloopInstall' in 1m24s
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher1881688070696555728/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.0-RC1-229-b7c15aa9...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading 2 projects from '/Users/kidaneweldemariam/code/playground/course-store/.bloop'...
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store-test.json'
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.10.
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/jansi.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/jline.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-compiler.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-library.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-reflect.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-xml_2.12.jar
+[0m[32m[D][0m Missing analysis file for project 'course-store'
+[0m[32m[D][0m Missing analysis file for project 'course-store-test'
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher1881688070696555728/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher1881688070696555728/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.03 17:55:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.03 17:56:01 ERROR Timeout waiting for 'build/initialize' response
+2020.06.03 17:56:01 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1771)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:304)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:246)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020.06.03 17:56:01 INFO  skipping build import with status 'Installed'
+2020.06.03 17:58:13 WARN  no build target for: /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/course.scala
+Jun 03, 2020 5:58:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 1 is not a valid line number, allowed [0..0]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 1 is not a valid line number, allowed [0..0]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 1 is not a valid line number, allowed [0..0]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 03, 2020 5:58:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 03, 2020 5:59:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 03, 2020 5:59:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 03, 2020 5:59:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 2 is not a valid line number, allowed [0..1]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+2020.06.03 18:02:35 WARN  no build target for: /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/course.scala
+Jun 03, 2020 6:02:35 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Jun 03, 2020 6:02:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+scala.MatchError: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+	at scala.tools.nsc.typechecker.Unapplies.constrParamss(Unapplies.scala:64)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth(Unapplies.scala:141)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth$(Unapplies.scala:138)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.factoryMeth(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper(MethodSynthesis.scala:229)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper$(MethodSynthesis.scala:228)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterImplicitWrapper(Namers.scala:58)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym(Global.scala:94)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym$(Global.scala:80)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$$anon$2.enterExistingSym(Global.scala:51)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym(AnalyzerPlugins.scala:479)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym$(AnalyzerPlugins.scala:478)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.pluginsEnterSym(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:272)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSym(Typers.scala:1933)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$enterSyms$1(Typers.scala:1928)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSyms(Typers.scala:1928)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1990)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1883)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5654)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5733)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:5797)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3357)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3357)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5363)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5656)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5733)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:115)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:451)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1333)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:665)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:814)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1225)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:370)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:53)
+
+2020.06.03 18:02:40 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals3137534174854693681/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.03 18:02:46 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.03 18:02:47 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.03 18:02:47 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.03 18:02:50 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.03 18:02:50 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.03 18:02:54 INFO  [success] Generated .bloop/course-store.json
+2020.06.03 18:02:54 INFO  [success] Generated .bloop/course-store-test.json
+2020.06.03 18:02:54 INFO  [success] Total time: 2 s, completed 03-Jun-2020 18:02:54
+2020.06.03 18:02:54 INFO  build tool exit: 0
+2020.06.03 18:02:54 INFO  time: ran 'sbt bloopInstall' in 13s
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher5214177667970568774/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/Users/kidaneweldemariam/code/playground/course-store/.bloop'...
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store.json'
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store-test.json'
+[0m[32m[D][0m Configured SemanticDB in projects 'course-store', 'course-store-test'
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher5214177667970568774/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher5214177667970568774/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.03 18:02:54 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.03 18:02:54 INFO  time: connected to build server in 0.1s
+2020.06.03 18:02:54 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.03 18:02:54 INFO  time: imported build in 0.23s
+Jun 03, 2020 6:02:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 452
+Jun 03, 2020 6:02:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 454
+Jun 03, 2020 6:02:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 457
+Jun 03, 2020 6:02:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 460
+2020.06.03 18:03:00 INFO  time: indexed workspace in 5.38s
+2020.06.03 18:03:01 INFO  compiling course-store (1 scala source)
+Jun 03, 2020 6:03:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 485
+Jun 03, 2020 6:03:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 523
+2020.06.03 18:03:25 INFO  compiling course-store (1 scala source)
+Jun 03, 2020 6:03:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 560
+2020.06.03 18:04:38 INFO  compiling course-store (1 scala source)
+2020.06.03 18:04:41 INFO  time: compiled course-store in 3.27s
+2020.06.03 18:06:40 INFO  compiling course-store (1 scala source)
+2020.06.03 18:06:40 INFO  time: compiled course-store in 0.38s
+2020.06.03 18:07:36 INFO  compiling course-store (1 scala source)
+2020.06.03 18:07:36 INFO  time: compiled course-store in 0.22s
+2020.06.03 18:07:52 INFO  compiling course-store (1 scala source)
+2020.06.03 18:07:55 INFO  time: compiled course-store in 3.03s
+Jun 03, 2020 6:08:02 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Jun 03, 2020 6:08:02 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+scala.MatchError: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+	at scala.tools.nsc.typechecker.Unapplies.constrParamss(Unapplies.scala:64)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth(Unapplies.scala:141)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth$(Unapplies.scala:138)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.factoryMeth(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper(MethodSynthesis.scala:229)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper$(MethodSynthesis.scala:228)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterImplicitWrapper(Namers.scala:58)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym(Global.scala:94)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym$(Global.scala:80)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$$anon$2.enterExistingSym(Global.scala:51)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym(AnalyzerPlugins.scala:479)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym$(AnalyzerPlugins.scala:478)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.pluginsEnterSym(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:272)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSym(Typers.scala:1929)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$enterSyms$1(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSyms(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1986)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1879)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5637)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:5780)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5346)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5639)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:114)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:453)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1333)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:665)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:814)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1225)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:370)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:53)
+
+Jun 03, 2020 6:08:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 852
+Jun 03, 2020 6:08:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 915
+Jun 03, 2020 6:08:52 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Jun 03, 2020 6:08:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+scala.MatchError: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+	at scala.tools.nsc.typechecker.Unapplies.constrParamss(Unapplies.scala:64)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth(Unapplies.scala:141)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth$(Unapplies.scala:138)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.factoryMeth(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper(MethodSynthesis.scala:229)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper$(MethodSynthesis.scala:228)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterImplicitWrapper(Namers.scala:58)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym(Global.scala:94)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym$(Global.scala:80)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$$anon$2.enterExistingSym(Global.scala:51)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym(AnalyzerPlugins.scala:479)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym$(AnalyzerPlugins.scala:478)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.pluginsEnterSym(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:272)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSym(Typers.scala:1929)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$enterSyms$1(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSyms(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1986)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1879)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5637)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:5780)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5346)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5639)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:114)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:453)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1333)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:665)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:814)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1225)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:370)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:53)
+
+Jun 03, 2020 6:09:10 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Jun 03, 2020 6:09:10 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+scala.MatchError: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+	at scala.tools.nsc.typechecker.Unapplies.constrParamss(Unapplies.scala:64)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth(Unapplies.scala:141)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth$(Unapplies.scala:138)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.factoryMeth(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper(MethodSynthesis.scala:229)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper$(MethodSynthesis.scala:228)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterImplicitWrapper(Namers.scala:58)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym(Global.scala:94)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym$(Global.scala:80)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$$anon$2.enterExistingSym(Global.scala:51)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym(AnalyzerPlugins.scala:479)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym$(AnalyzerPlugins.scala:478)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.pluginsEnterSym(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:272)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSym(Typers.scala:1929)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$enterSyms$1(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSyms(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1986)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1879)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5637)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:5780)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5346)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5639)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:114)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:453)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1333)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:665)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:814)
+	at scala.meta.internal.pc.HoverProvider.typedHoverTreeAt(HoverProvider.scala:233)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:24)
+
+Jun 03, 2020 6:09:10 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Jun 03, 2020 6:09:10 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+scala.MatchError: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+	at scala.tools.nsc.typechecker.Unapplies.constrParamss(Unapplies.scala:64)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth(Unapplies.scala:141)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth$(Unapplies.scala:138)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.factoryMeth(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper(MethodSynthesis.scala:229)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper$(MethodSynthesis.scala:228)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterImplicitWrapper(Namers.scala:58)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym(Global.scala:94)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym$(Global.scala:80)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$$anon$2.enterExistingSym(Global.scala:51)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym(AnalyzerPlugins.scala:479)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym$(AnalyzerPlugins.scala:478)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.pluginsEnterSym(MetalsGlobal.scala:52)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:272)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSym(Typers.scala:1929)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$enterSyms$1(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSyms(Typers.scala:1924)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1986)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1879)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5637)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:5780)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3353)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5346)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5639)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5716)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:114)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:453)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1333)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:665)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:814)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1225)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:370)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:53)
+
+Jun 03, 2020 6:09:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1149
+2020.06.03 18:11:39 INFO  compiling course-store (1 scala source)
+2020.06.03 18:11:41 INFO  time: compiled course-store in 2.17s
+2020.06.03 18:12:21 INFO  compiling course-store (1 scala source)
+2020.06.03 18:12:21 INFO  time: compiled course-store in 0.44s
+2020.06.03 18:12:59 INFO  compiling course-store (1 scala source)
+2020.06.03 18:12:59 INFO  time: compiled course-store in 0.56s
+2020.06.03 18:13:27 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:13:30 INFO  time: compiled course-store in 3.53s
+Jun 03, 2020 6:14:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 4 is not a valid line number, allowed [0..3]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 4 is not a valid line number, allowed [0..3]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 4 is not a valid line number, allowed [0..3]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 03, 2020 6:14:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1539
+Jun 03, 2020 6:14:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1586
+Jun 03, 2020 6:15:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 9 is not a valid line number, allowed [0..8]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 9 is not a valid line number, allowed [0..8]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 9 is not a valid line number, allowed [0..8]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 03, 2020 6:15:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 10 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 10 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 10 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 03, 2020 6:16:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 9 is not a valid line number, allowed [0..8]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 9 is not a valid line number, allowed [0..8]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 9 is not a valid line number, allowed [0..8]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+2020.06.03 18:17:57 INFO  compiling course-store (1 scala source)
+2020.06.03 18:17:57 INFO  time: compiled course-store in 0.19s
+Jun 03, 2020 6:18:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2350
+2020.06.03 18:18:33 INFO  compiling course-store (1 scala source)
+2020.06.03 18:18:33 INFO  time: compiled course-store in 0.14s
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:5:32: stale bloop error: not found: type Course
+    def getCourse(id: UUID): F[Course]
+                               ^^^^^^
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:6:39: stale bloop error: not found: type Course
+    def createCourse(name: String): F[Course]
+                                      ^^^^^^
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:8:51: stale bloop error: not found: type Course
+    def modifyCourse(id: UUID, course: Course): F[Course]
+                                                  ^^^^^^
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:8:40: stale bloop error: not found: type Course
+    def modifyCourse(id: UUID, course: Course): F[Course]
+                                       ^^^^^^
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:5:32: stale bloop error: not found: type Course
+    def getCourse(id: UUID): F[Course]
+                               ^^^^^^
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:6:39: stale bloop error: not found: type Course
+    def createCourse(name: String): F[Course]
+                                      ^^^^^^
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:8:51: stale bloop error: not found: type Course
+    def modifyCourse(id: UUID, course: Course): F[Course]
+                                                  ^^^^^^
+2020.06.03 18:19:22 INFO  /Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepository.scala:8:40: stale bloop error: not found: type Course
+    def modifyCourse(id: UUID, course: Course): F[Course]
+                                       ^^^^^^
+2020.06.03 18:19:32 INFO  compiling course-store (1 scala source)
+2020.06.03 18:19:32 INFO  time: compiled course-store in 0.21s
+2020.06.03 18:19:46 INFO  compiling course-store (1 scala source)
+2020.06.03 18:19:46 INFO  time: compiled course-store in 0.21s
+2020.06.03 18:20:06 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:20:06 INFO  time: compiled course-store in 0.84s
+2020.06.03 18:20:13 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:20:14 INFO  time: compiled course-store in 1.05s
+2020.06.03 18:20:50 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:20:50 INFO  time: compiled course-store in 0.81s
+2020.06.03 18:21:14 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:21:14 INFO  time: compiled course-store in 0.14s
+2020.06.03 18:21:14 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:21:14 INFO  time: compiled course-store in 62ms
+2020.06.03 18:21:57 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:21:57 INFO  time: compiled course-store in 0.19s
+2020.06.03 18:23:00 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:23:04 WARN  there was one feature warning; re-run with -feature for details
+2020.06.03 18:23:04 INFO  time: compiled course-store in 3.98s
+2020.06.03 18:24:51 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:24:51 INFO  time: compiled course-store in 0.15s
+2020.06.03 18:24:51 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:24:51 INFO  time: compiled course-store in 0.11s
+2020.06.03 18:25:02 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:25:02 INFO  time: compiled course-store in 0.13s
+2020.06.03 18:25:02 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:25:02 INFO  time: compiled course-store in 0.18s
+2020.06.03 18:25:44 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:25:44 INFO  time: compiled course-store in 0.28s
+2020.06.03 18:25:44 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:25:44 INFO  time: compiled course-store in 0.2s
+2020.06.03 18:26:23 INFO  disconnected: build server
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher7917916613482278835/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.0-RC1-229-b7c15aa9...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/Users/kidaneweldemariam/code/playground/course-store/.bloop'...
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store.json'
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.10.
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/jansi.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/jline.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-compiler.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-library.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-reflect.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/.sbt/boot/scala-2.12.10/lib/scala-xml_2.12.jar
+[0m[32m[D][0m Configured SemanticDB in projects 'course-store-test', 'course-store'
+[0m[32m[D][0m Missing analysis file for project 'course-store-test'
+[0m[32m[D][0m Loading previous analysis for 'course-store' from '/Users/kidaneweldemariam/code/playground/course-store/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.12.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher7917916613482278835/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher7917916613482278835/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.03 18:26:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.03 18:26:29 INFO  time: connected to build server in 6.01s
+2020.06.03 18:26:29 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.03 18:26:28 INFO  time: imported build in 0.15s
+2020.06.03 18:26:29 INFO  time: indexed workspace in 0.69s
+2020.06.03 18:26:30 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:26:35 INFO  time: compiled course-store in 4.56s
+2020.06.03 18:26:43 INFO  compiling course-store (2 scala sources)
+2020.06.03 18:26:52 WARN  there was one feature warning; re-run with -feature for details
+2020.06.03 18:26:52 INFO  time: compiled course-store in 9.92s

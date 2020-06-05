@@ -918,3 +918,1090 @@ something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-sto
 2020.06.03 19:11:02 INFO  time: compiled course-store in 0.47s
 2020.06.03 19:11:49 INFO  compiling course-store (2 scala sources)
 2020.06.03 19:11:49 INFO  time: compiled course-store in 0.45s
+2020.06.03 19:40:15 INFO  shutting down Metals
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+2020.06.05 17:27:17 INFO  started: Metals version 0.9.0 in workspace '/Users/kidaneweldemariam/code/playground/course-store'
+2020.06.05 17:27:18 INFO  time: initialize in 1.03s
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher8656373049276120875/bsp.socket'...
+Waiting for the bsp connection to come up...
+2020.06.05 17:27:20 INFO  skipping build import with status 'Installed'
+2020.06.05 17:27:20 INFO  no build target: using presentation compiler with only scala-library
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher8656373049276120875/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher8656373049276120875/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.05 17:27:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.05 17:27:24 INFO  time: connected to build server in 3.79s
+2020.06.05 17:27:24 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.05 17:27:24 INFO  time: imported build in 0.18s
+2020.06.05 17:27:27 INFO  compiling course-store (2 scala sources)
+2020.06.05 17:27:32 INFO  time: compiled course-store in 5.49s
+2020.06.05 17:27:33 INFO  time: indexed workspace in 9.32s
+2020.06.05 17:28:06 INFO  compiling course-store (2 scala sources)
+2020.06.05 17:28:11 INFO  time: compiled course-store in 4.88s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 434, 434, 451)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in repository.CourseRepo[F]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 482, 482, 495)
+2020.06.05 17:31:57 INFO  compiling course-store (2 scala sources)
+2020.06.05 17:31:57 INFO  time: compiled course-store in 0.9s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 434, 434, 451)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 434, 434, 451)
+2020.06.05 17:35:18 INFO  compiling course-store (2 scala sources)
+2020.06.05 17:35:19 INFO  time: compiled course-store in 1.47s
+2020.06.05 17:35:19 INFO  compiling course-store (2 scala sources)
+2020.06.05 17:35:19 INFO  time: compiled course-store in 0.66s
+Jun 05, 2020 5:41:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Jun 05, 2020 5:42:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 3 is not a valid line number, allowed [0..2]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 3 is not a valid line number, allowed [0..2]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 3 is not a valid line number, allowed [0..2]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 05, 2020 5:42:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 4 is not a valid line number, allowed [0..3]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 4 is not a valid line number, allowed [0..3]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 4 is not a valid line number, allowed [0..3]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 05, 2020 5:42:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 5 is not a valid line number, allowed [0..4]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 5 is not a valid line number, allowed [0..4]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 5 is not a valid line number, allowed [0..4]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 05, 2020 5:42:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 7 is not a valid line number, allowed [0..6]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 7 is not a valid line number, allowed [0..6]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 7 is not a valid line number, allowed [0..6]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+2020.06.05 17:44:42 INFO  compiling course-store (2 scala sources)
+2020.06.05 17:44:47 WARN  there were three feature warnings; re-run with -feature for details
+2020.06.05 17:44:47 INFO  time: compiled course-store in 5.13s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 434, 434, 451)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 265, 265, 274)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 265, 265, 274)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 265, 265, 274)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 265, 265, 274)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 265, 265, 274)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 265, 265, 275)
+Jun 05, 2020 5:45:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 846
+2020.06.05 17:45:30 INFO  compiling course-store (1 scala source)
+2020.06.05 17:45:32 INFO  time: compiled course-store in 2.15s
+2020.06.05 17:46:39 INFO  compiling course-store (1 scala source)
+2020.06.05 17:46:39 INFO  time: compiled course-store in 0.22s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 686, 686, 699)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 686, 686, 699)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 751)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 744)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 745)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 749)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 742, 742, 758)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 742, 742, 751)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 742, 742, 752)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 742, 742, 754)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 742, 742, 756)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 742, 742, 756)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 742, 742, 756)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in F[List[Option[model.Course]]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in F[List[Option[model.Course]]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 760)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 744, 744, 758)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 744, 744, 758)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in F[List[Option[model.Course]]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 760)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in F[List[Option[model.Course]]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 760)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 744, 744, 758)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 744, 744, 758)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 744, 744, 758)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[Option[model.Course]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 759)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in F[List[Option[model.Course]]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 737, 737, 760)
+2020.06.05 17:53:44 INFO  compiling course-store (1 scala source)
+2020.06.05 17:53:44 INFO  time: compiled course-store in 0.84s
+Jun 05, 2020 5:55:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 05, 2020 5:55:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 05, 2020 5:56:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 8 is not a valid line number, allowed [0..7]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 8 is not a valid line number, allowed [0..7]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 8 is not a valid line number, allowed [0..7]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 05, 2020 5:56:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2550
+Jun 05, 2020 5:56:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2551
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 36, 36, 50)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 38, 38, 45)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 39, 39, 47)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 40, 40, 48)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 41, 41, 49)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 46, 46, 64)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 47, 47, 65)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 49, 49, 70)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in cats.effect.IO[Int]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 70, 70, 77)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[cats.effect.IO[Int]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 65, 65, 78)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in cats.effect.IO[Int]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 70, 70, 77)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in Option[Int]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 70, 70, 81)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in List[Option[Int]]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 65, 65, 82)
+Jun 05, 2020 6:04:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 10 is not a valid line number, allowed [0..9]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 10 is not a valid line number, allowed [0..9]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 10 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+Jun 05, 2020 6:04:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 14 is not a valid line number, allowed [0..13]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 14 is not a valid line number, allowed [0..13]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 14 is not a valid line number, allowed [0..13]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:196)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:295)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$onTypeFormatting$1(ScalaPresentationCompiler.scala:151)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+2020.06.05 18:05:20 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals3151669712366170133/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.05 18:05:32 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.05 18:05:36 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.05 18:05:36 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.05 18:05:37 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.05 18:05:37 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.05 18:05:39 INFO  [success] Generated .bloop/course-store-test.json
+2020.06.05 18:05:39 INFO  [success] Generated .bloop/course-store.json
+2020.06.05 18:05:39 INFO  [success] Total time: 1 s, completed 05-Jun-2020 18:05:39
+2020.06.05 18:05:39 INFO  build tool exit: 0
+2020.06.05 18:05:39 INFO  time: ran 'sbt bloopInstall' in 19s
+2020.06.05 18:05:39 INFO  disconnected: build server
+No more data in the client stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher4257936472006522876/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher4257936472006522876/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher4257936472006522876/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.05 18:05:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.05 18:05:39 INFO  time: connected to build server in 0.12s
+2020.06.05 18:05:39 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.05 18:05:39 INFO  time: indexed workspace in 0.59s
+2020.06.05 18:05:40 INFO  compiling course-store (1 scala source)
+2020.06.05 18:05:40 INFO  time: compiled course-store in 0.71s
+2020.06.05 18:05:48 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals390005657544600139/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.05 18:06:00 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.05 18:06:03 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.05 18:06:03 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.05 18:06:08 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.05 18:06:08 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.05 18:06:11 INFO  [warn] 
+2020.06.05 18:06:11 INFO  [warn] 	Note: Unresolved dependencies path:
+2020.06.05 18:06:11 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading org.scala-lang:scala-library:2.13
+2020.06.05 18:06:11 INFO  [error]   Not found
+2020.06.05 18:06:11 INFO  [error]   Not found
+2020.06.05 18:06:11 INFO  [error]   not found: /Users/kidaneweldemariam/.ivy2/local/org.scala-lang/scala-library/2.13/ivys/ivy.xml
+2020.06.05 18:06:11 INFO  [error]   not found: https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13/scala-library-2.13.pom
+2020.06.05 18:06:11 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:246)
+2020.06.05 18:06:11 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$34(CoursierDependencyResolution.scala:215)
+2020.06.05 18:06:11 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
+2020.06.05 18:06:11 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:215)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:52)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:102)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:69)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:115)
+2020.06.05 18:06:11 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:115)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:96)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChanged$1(Tracked.scala:150)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:129)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$5(Defaults.scala:2947)
+2020.06.05 18:06:11 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:67)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.Execute.work(Execute.scala:290)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)
+2020.06.05 18:06:11 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)
+2020.06.05 18:06:11 INFO  [error] 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2020.06.05 18:06:11 INFO  [error] 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+2020.06.05 18:06:11 INFO  [error] 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2020.06.05 18:06:11 INFO  [error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2020.06.05 18:06:11 INFO  [error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2020.06.05 18:06:11 INFO  [error] 	at java.lang.Thread.run(Thread.java:748)
+2020.06.05 18:06:11 INFO  [error] (update) sbt.librarymanagement.ResolveException: Error downloading org.scala-lang:scala-library:2.13
+2020.06.05 18:06:11 INFO  [error]   Not found
+2020.06.05 18:06:11 INFO  [error]   Not found
+2020.06.05 18:06:11 INFO  [error]   not found: /Users/kidaneweldemariam/.ivy2/local/org.scala-lang/scala-library/2.13/ivys/ivy.xml
+2020.06.05 18:06:11 INFO  [error]   not found: https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13/scala-library-2.13.pom
+2020.06.05 18:06:11 INFO  [error] Total time: 2 s, completed 05-Jun-2020 18:06:12
+2020.06.05 18:06:11 INFO  build tool exit: 1
+2020.06.05 18:06:12 INFO  time: ran 'sbt bloopInstall' in 23s
+2020.06.05 18:06:12 INFO  disconnected: build server
+2020.06.05 18:06:12 ERROR sbt command failed: /Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals390005657544600139/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+No more data in the client stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher2956960445484292722/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher2956960445484292722/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher2956960445484292722/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.05 18:06:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.05 18:06:12 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.05 18:06:12 INFO  time: indexed workspace in 0.45s
+2020.06.05 18:06:20 INFO  skipping build import with status 'Failed'
+2020.06.05 18:06:20 INFO  compiling course-store (1 scala source)
+2020.06.05 18:06:20 INFO  time: compiled course-store in 0.68s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc in cats.effect.IO[Int]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/model/play.sc, 70, 70, 77)
+2020.06.05 18:06:24 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals2852860690450209947/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.05 18:06:34 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.05 18:06:37 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.05 18:06:37 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.05 18:06:41 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.05 18:06:41 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.05 18:06:45 INFO  [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+2020.06.05 18:06:45 INFO  [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+2020.06.05 18:06:46 INFO  [success] Generated .bloop/course-store.json
+2020.06.05 18:06:46 INFO  [success] Generated .bloop/course-store-test.json
+2020.06.05 18:06:46 INFO  [success] Total time: 3 s, completed 05-Jun-2020 18:06:46
+2020.06.05 18:06:46 INFO  build tool exit: 0
+2020.06.05 18:06:46 INFO  time: ran 'sbt bloopInstall' in 22s
+2020.06.05 18:06:46 INFO  disconnected: build server
+No more data in the client stdin, exiting...
+Starting the bsp launcher for bloop...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher6308641364659122101/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/Users/kidaneweldemariam/code/playground/course-store/.bloop'...
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store-test.json'
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.13.1.
+[0m[32m[D][0m   => /Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.12/jansi-1.12.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.1/scala-compiler-2.13.1.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.1/scala-library-2.13.1.jar
+[0m[32m[D][0m   => /Users/kidaneweldemariam/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.1/scala-reflect-2.13.1.jar
+[0m[32m[D][0m Resolving org.scalameta:semanticdb-scalac_2.13.1:4.3.10
+[0m[32m[D][0m Configured SemanticDB in projects 'course-store', 'course-store-test'
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher6308641364659122101/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher6308641364659122101/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.05 18:06:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.05 18:06:52 INFO  time: connected to build server in 5.66s
+2020.06.05 18:06:52 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.05 18:06:54 INFO  time: indexed workspace in 2.11s
+2020.06.05 18:07:03 INFO  compiling course-store (2 scala sources)
+2020.06.05 18:07:30 INFO  time: compiled course-store in 26s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in Option[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 744, 744, 758)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[<error>]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 739, 739, 751)
+2020.06.05 18:09:27 INFO  compiling course-store (2 scala sources)
+2020.06.05 18:09:28 INFO  time: compiled course-store in 1.23s
+2020.06.05 18:10:34 INFO  compiling course-store (2 scala sources)
+2020.06.05 18:10:36 INFO  time: compiled course-store in 1.19s
+Jun 05, 2020 6:11:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3918
+2020.06.05 18:11:07 INFO  compiling course-store (2 scala sources)
+2020.06.05 18:11:07 INFO  time: compiled course-store in 0.17s
+2020.06.05 18:11:07 INFO  compiling course-store (2 scala sources)
+2020.06.05 18:11:07 INFO  time: compiled course-store in 77ms
+2020.06.05 18:11:46 INFO  compiling course-store (2 scala sources)
+2020.06.05 18:11:51 WARN  there was one deprecation warning (since 2.13.0); re-run with -deprecation for details
+2020.06.05 18:11:51 INFO  time: compiled course-store in 5.4s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in repository.CourseRepo[F]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 573, 573, 586)
+2020.06.05 18:18:30 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals3522797879480605319/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.05 18:18:41 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.05 18:18:44 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.05 18:18:44 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.05 18:18:50 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.05 18:18:50 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.05 18:18:53 WARN  no build target for: /Users/kidaneweldemariam/code/playground/course-store/src/test/repository/CourseReposSpec.scala
+2020.06.05 18:18:55 INFO  [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+2020.06.05 18:18:55 INFO  [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+2020.06.05 18:18:55 INFO  [success] Generated .bloop/course-store-test.json
+2020.06.05 18:18:55 INFO  [success] Generated .bloop/course-store.json
+2020.06.05 18:18:55 INFO  [success] Total time: 4 s, completed 05-Jun-2020 18:18:56
+2020.06.05 18:18:56 INFO  build tool exit: 0
+2020.06.05 18:18:56 INFO  time: ran 'sbt bloopInstall' in 25s
+2020.06.05 18:18:56 INFO  disconnected: build server
+No more data in the client stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher4836860624524391272/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/Users/kidaneweldemariam/code/playground/course-store/.bloop'...
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store-test.json'
+[0m[32m[D][0m Loading project from '/Users/kidaneweldemariam/code/playground/course-store/.bloop/course-store.json'
+[0m[32m[D][0m Configured SemanticDB in projects 'course-store-test', 'course-store'
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher4836860624524391272/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher4836860624524391272/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.05 18:18:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.05 18:18:56 INFO  time: connected to build server in 0.11s
+2020.06.05 18:18:56 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.05 18:18:58 INFO  time: indexed workspace in 1.34s
+2020.06.05 18:19:09 WARN  no build target for: /Users/kidaneweldemariam/code/playground/course-store/src/test/repository/CourseReposSpec.scala
+2020.06.05 18:19:17 INFO  compiling course-store (2 scala sources)
+2020.06.05 18:19:22 WARN  there was one deprecation warning (since 2.13.0); re-run with -deprecation for details
+2020.06.05 18:19:22 INFO  time: compiled course-store in 5.21s
+2020.06.05 18:21:10 WARN  no build target for: /Users/kidaneweldemariam/code/playground/course-store/src/test/repository/CourseReposSpec.scala
+2020.06.05 18:21:52 WARN  no build target for: /Users/kidaneweldemariam/code/playground/course-store/src/test/repository/CourseReposTest.scala
+2020.06.05 18:22:15 INFO  running '/Users/kidaneweldemariam/.sdkman/candidates/java/8.0.212-zulu/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/metals3587670824372622749/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2020.06.05 18:22:26 INFO  [info] Loading global plugins from /Users/kidaneweldemariam/.sbt/1.0/plugins
+2020.06.05 18:22:28 INFO  [info] Loading settings for project course-store-build from metals.sbt ...
+2020.06.05 18:22:28 INFO  [info] Loading project definition from /Users/kidaneweldemariam/code/playground/course-store/project
+2020.06.05 18:22:29 INFO  [info] Loading settings for project course-store from build.sbt ...
+2020.06.05 18:22:29 INFO  [info] Set current project to course-store (in build file:/Users/kidaneweldemariam/code/playground/course-store/)
+2020.06.05 18:22:33 INFO  [warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+2020.06.05 18:22:33 INFO  [success] Generated .bloop/course-store.json
+2020.06.05 18:22:33 INFO  [success] Generated .bloop/course-store-test.json
+2020.06.05 18:22:33 INFO  [success] Total time: 3 s, completed 05-Jun-2020 18:22:33
+2020.06.05 18:22:33 INFO  build tool exit: 0
+2020.06.05 18:22:33 INFO  time: ran 'sbt bloopInstall' in 17s
+2020.06.05 18:22:33 INFO  disconnected: build server
+No more data in the client stdin, exiting...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher6788073012392123623/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher6788073012392123623/bsp.socket...
+The server is listening for incoming connections at local:///var/folders/gf/kndhx9sx6wsgdy2fhs3kxq2w0000gp/T/bsp-launcher6788073012392123623/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+2020.06.05 18:22:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/bsp.trace.json
+2020.06.05 18:22:33 INFO  Connected to Build server v1.4.0-RC1-229-b7c15aa9
+2020.06.05 18:22:33 INFO  time: indexed workspace in 0.5s
+2020.06.05 18:24:25 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:24:28 INFO  time: compiled course-store-test in 3.26s
+2020.06.05 18:26:16 WARN  no build target for: /Users/kidaneweldemariam/code/playground/course-store/src/test/repository/CourseReposSpec.scala
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 525, 525, 542)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 525, 525, 542)
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in scala.collection.mutable.Map[java.util.UUID,model.Course]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 525, 525, 542)
+2020.06.05 18:29:11 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:29:11 INFO  time: compiled course-store-test in 0.78s
+2020.06.05 18:33:04 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:33:04 INFO  time: compiled course-store-test in 0.32s
+2020.06.05 18:34:33 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:34:35 INFO  time: compiled course-store-test in 2.19s
+something's wrong: no file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala in List[java.util.UUID]RangePosition(file:///Users/kidaneweldemariam/code/playground/course-store/src/main/scala/repository/CourseRepos.scala, 304, 304, 314)
+Jun 05, 2020 6:36:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5679
+2020.06.05 18:37:41 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:37:41 INFO  time: compiled course-store-test in 0.72s
+2020.06.05 18:38:07 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:38:10 INFO  time: compiled course-store-test in 2.24s
+2020.06.05 18:38:12 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:38:12 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:38:12 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:38:14 INFO  Listening for transport dt_socket at address: 59074
+2020.06.05 18:38:14 INFO  Trying to attach to remote debuggee VM localhost:59074 .
+2020.06.05 18:38:14 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:38:16 INFO  [32mMySuite:[0m
+2020.06.05 18:38:17 INFO  [32m  + [0m[32mget Course[0m [90m0.959s[0m
+2020.06.05 18:38:17 INFO  Execution took 0.96s
+2020.06.05 18:38:17 INFO  1 tests, 1 passed
+2020.06.05 18:38:17 INFO  All tests in MySuite passed
+2020.06.05 18:38:17 INFO  
+2020.06.05 18:38:17 INFO  ===============================================
+2020.06.05 18:38:17 INFO  Total duration: 0.96s
+2020.06.05 18:38:17 INFO  All 1 test suites passed.
+2020.06.05 18:38:17 INFO  ===============================================
+2020.06.05 18:38:17 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:39:05 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:39:05 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:39:05 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:39:05 INFO  Listening for transport dt_socket at address: 59097
+2020.06.05 18:39:05 INFO  Trying to attach to remote debuggee VM localhost:59097 .
+2020.06.05 18:39:05 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:39:06 INFO  [32mMySuite:[0m
+2020.06.05 18:39:06 INFO  [32m  + [0m[32mget Course[0m [90m0.822s[0m
+2020.06.05 18:39:06 INFO  Execution took 0.82s
+2020.06.05 18:39:06 INFO  1 tests, 1 passed
+2020.06.05 18:39:06 INFO  All tests in MySuite passed
+2020.06.05 18:39:06 INFO  
+2020.06.05 18:39:07 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:39:06 INFO  ===============================================
+2020.06.05 18:39:06 INFO  Total duration: 0.82s
+2020.06.05 18:39:06 INFO  All 1 test suites passed.
+2020.06.05 18:39:06 INFO  ===============================================
+2020.06.05 18:39:32 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:39:33 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:39:32 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:39:33 INFO  Listening for transport dt_socket at address: 59111
+2020.06.05 18:39:33 INFO  Trying to attach to remote debuggee VM localhost:59111 .
+2020.06.05 18:39:33 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:39:34 INFO  [32mMySuite:[0m
+2020.06.05 18:39:34 INFO  [32m  + [0m[32mget Course[0m [90m0.734s[0m
+2020.06.05 18:39:34 INFO  Execution took 0.73s
+2020.06.05 18:39:34 INFO  1 tests, 1 passed
+2020.06.05 18:39:34 INFO  All tests in MySuite passed
+2020.06.05 18:39:34 INFO  
+2020.06.05 18:39:35 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:39:34 INFO  ===============================================
+2020.06.05 18:39:34 INFO  Total duration: 0.73s
+2020.06.05 18:39:34 INFO  All 1 test suites passed.
+2020.06.05 18:39:34 INFO  ===============================================
+2020.06.05 18:40:42 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:40:42 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:40:42 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:40:42 INFO  Listening for transport dt_socket at address: 59141
+2020.06.05 18:40:42 INFO  Trying to attach to remote debuggee VM localhost:59141 .
+2020.06.05 18:40:42 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:40:44 INFO  [32mMySuite:[0m
+2020.06.05 18:40:45 INFO  [32m  + [0m[32mget Course[0m [90m1.076s[0m
+2020.06.05 18:40:45 INFO  Execution took 1.08s
+2020.06.05 18:40:45 INFO  1 tests, 1 passed
+2020.06.05 18:40:45 INFO  All tests in MySuite passed
+2020.06.05 18:40:45 INFO  
+2020.06.05 18:40:45 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:40:45 INFO  ===============================================
+2020.06.05 18:40:45 INFO  Total duration: 1.08s
+2020.06.05 18:40:45 INFO  All 1 test suites passed.
+2020.06.05 18:40:45 INFO  ===============================================
+Jun 05, 2020 6:41:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 22 is not a valid line number, allowed [0..20]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 22 is not a valid line number, allowed [0..20]
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: 22 is not a valid line number, allowed [0..20]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:38)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:33)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:185)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.withToken(MultilineStringFormattingProvider.scala:197)
+	at scala.meta.internal.metals.MultilineStringFormattingProvider$.format(MultilineStringFormattingProvider.scala:322)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$rangeFormatting$1(ScalaPresentationCompiler.scala:160)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+2020.06.05 18:42:44 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:42:44 INFO  time: compiled course-store-test in 0.58s
+2020.06.05 18:42:49 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:42:49 INFO  time: compiled course-store-test in 0.65s
+2020.06.05 18:43:15 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:43:15 INFO  time: compiled course-store-test in 0.54s
+2020.06.05 18:43:15 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:43:16 INFO  time: compiled course-store-test in 0.41s
+2020.06.05 18:43:42 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:43:45 INFO  time: compiled course-store-test in 2.53s
+2020.06.05 18:43:46 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:43:46 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:43:46 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:43:46 INFO  Listening for transport dt_socket at address: 59211
+2020.06.05 18:43:46 INFO  Trying to attach to remote debuggee VM localhost:59211 .
+2020.06.05 18:43:46 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:43:48 INFO  [32mMySuite:[0m
+2020.06.05 18:43:48 INFO  [32m  + [0m[32mget Course find one[0m [90m0.918s[0m
+2020.06.05 18:43:48 INFO  [32m  + [0m[32mget Course find none[0m [90m0.002s[0m
+2020.06.05 18:43:48 INFO  Execution took 0.92s
+2020.06.05 18:43:48 INFO  2 tests, 2 passed
+2020.06.05 18:43:48 INFO  All tests in MySuite passed
+2020.06.05 18:43:48 INFO  
+2020.06.05 18:43:49 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:43:49 INFO  ===============================================
+2020.06.05 18:43:49 INFO  Total duration: 0.92s
+2020.06.05 18:43:49 INFO  All 1 test suites passed.
+2020.06.05 18:43:49 INFO  ===============================================
+2020.06.05 18:44:49 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:44:49 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:44:49 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:44:49 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:44:49 INFO  Listening for transport dt_socket at address: 59237
+2020.06.05 18:44:49 INFO  Trying to attach to remote debuggee VM localhost:59237 .
+2020.06.05 18:44:49 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:44:49 INFO  time: compiled course-store-test in 0.51s
+2020.06.05 18:44:51 INFO  [32mMySuite:[0m
+2020.06.05 18:44:51 INFO  [32m  + [0m[32mget Course find one[0m [90m0.913s[0m
+2020.06.05 18:44:51 INFO  [32m  + [0m[32mget Course find none[0m [90m0.002s[0m
+2020.06.05 18:44:51 INFO  Execution took 0.92s
+2020.06.05 18:44:51 INFO  2 tests, 2 passed
+2020.06.05 18:44:51 INFO  All tests in MySuite passed
+2020.06.05 18:44:51 INFO  
+2020.06.05 18:44:52 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:44:52 INFO  ===============================================
+2020.06.05 18:44:52 INFO  Total duration: 0.92s
+2020.06.05 18:44:52 INFO  All 1 test suites passed.
+2020.06.05 18:44:52 INFO  ===============================================
+2020.06.05 18:45:31 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:45:31 INFO  time: compiled course-store-test in 0.71s
+2020.06.05 18:46:33 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:46:33 INFO  time: compiled course-store-test in 0.16s
+2020.06.05 18:46:40 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:46:40 INFO  time: compiled course-store-test in 0.5s
+2020.06.05 18:47:28 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:47:28 INFO  time: compiled course-store-test in 0.42s
+2020.06.05 18:47:45 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:47:47 INFO  time: compiled course-store-test in 1.89s
+Jun 05, 2020 6:48:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6904
+Jun 05, 2020 6:48:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6991
+Jun 05, 2020 6:49:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7096
+2020.06.05 18:50:29 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:50:30 INFO  time: compiled course-store-test in 1.71s
+2020.06.05 18:50:40 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:50:40 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:50:40 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:50:40 INFO  Listening for transport dt_socket at address: 59386
+2020.06.05 18:50:40 INFO  Trying to attach to remote debuggee VM localhost:59386 .
+2020.06.05 18:50:40 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:50:41 INFO  [32mMySuite:[0m
+2020.06.05 18:50:41 INFO  [32m  + [0m[32mget Course find one[0m [90m0.778s[0m
+2020.06.05 18:50:41 INFO  [32m  + [0m[32mget Course find none[0m [90m0.002s[0m
+2020.06.05 18:50:41 INFO  [32m  + [0m[32mget Courses find[0m [90m0.045s[0m
+2020.06.05 18:50:41 INFO  Execution took 0.82s
+2020.06.05 18:50:41 INFO  3 tests, 3 passed
+2020.06.05 18:50:41 INFO  All tests in MySuite passed
+2020.06.05 18:50:41 INFO  
+2020.06.05 18:50:42 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:50:41 INFO  ===============================================
+2020.06.05 18:50:41 INFO  Total duration: 0.82s
+2020.06.05 18:50:41 INFO  All 1 test suites passed.
+2020.06.05 18:50:41 INFO  ===============================================
+2020.06.05 18:52:10 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:52:12 INFO  time: compiled course-store-test in 1.74s
+2020.06.05 18:52:14 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:52:14 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:52:14 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:52:14 INFO  Listening for transport dt_socket at address: 59423
+2020.06.05 18:52:14 INFO  Trying to attach to remote debuggee VM localhost:59423 .
+2020.06.05 18:52:14 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:52:14 INFO  fe6291e5-9b9e-4f19-9645-323fcbb942bb
+2020.06.05 18:52:15 INFO  [32mMySuite:[0m
+2020.06.05 18:52:15 INFO  [32m  + [0m[32mget Course find one[0m [90m0.609s[0m
+2020.06.05 18:52:15 INFO  [32m  + [0m[32mget Course find none[0m [90m0.002s[0m
+2020.06.05 18:52:15 INFO  [91m==> X [0m[91mMySuite[0m.[91mget Courses find[0m  [90m0.155s[0m munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:31
+2020.06.05 18:52:15 INFO  30:    val expected = List(c1)
+2020.06.05 18:52:15 INFO  [7m31:    assertEquals(obtained, expected)[0m
+2020.06.05 18:52:15 INFO  32:  }
+2020.06.05 18:52:15 INFO  values are not the same
+2020.06.05 18:52:15 INFO  [1m=> Obtained[0m
+2020.06.05 18:52:15 INFO  List(
+2020.06.05 18:52:15 INFO    Course(
+2020.06.05 18:52:15 INFO      id = 8f930a62-c673-4bd6-9478-3b9dc145c0be,
+2020.06.05 18:52:15 INFO      name = "Intro to Compilers"
+2020.06.05 18:52:15 INFO    ),
+2020.06.05 18:52:15 INFO    Course(
+2020.06.05 18:52:15 INFO      id = b11d4f3a-60c0-40ab-8ae2-7634bf456ba7,
+2020.06.05 18:52:15 INFO      name = "Data Structures"
+2020.06.05 18:52:15 INFO    )
+2020.06.05 18:52:15 INFO  )
+2020.06.05 18:52:15 INFO  [1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+2020.06.05 18:52:15 INFO       name = "Intro to Compilers"
+2020.06.05 18:52:15 INFO  [91m-  ),[0m
+2020.06.05 18:52:15 INFO  [91m-  Course([0m
+2020.06.05 18:52:15 INFO  [91m-    id = b11d4f3a-60c0-40ab-8ae2-7634bf456ba7,[0m
+2020.06.05 18:52:15 INFO  [91m-    name = "Data Structures"[0m
+2020.06.05 18:52:15 INFO     )
+2020.06.05 18:52:15 INFO  [90m    at [0m[90mmunit.FunSuite.assertEquals[0m[90m([0m[90mFunSuite.scala[0m:[90m11[0m[90m)[0m
+2020.06.05 18:52:15 INFO  [1m    at [0m[1mMySuite.$anonfun$new$5[0m[1m([0m[1mCourseReposTest.scala[0m:[1m31[0m[1m)[0m
+2020.06.05 18:52:15 INFO  Execution took 0.77s
+2020.06.05 18:52:15 INFO  3 tests, 2 passed, 1 failed
+2020.06.05 18:52:15 INFO  
+2020.06.05 18:52:16 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:52:15 INFO  ===============================================
+2020.06.05 18:52:15 INFO  Total duration: 0.77s
+2020.06.05 18:52:15 INFO  1 failed
+2020.06.05 18:52:15 INFO  
+2020.06.05 18:52:15 INFO  Failed:
+2020.06.05 18:52:15 INFO  - MySuite:
+2020.06.05 18:52:15 INFO    * MySuite.get Courses find - munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:31
+30:    val expected = List(c1)
+[7m31:    assertEquals(obtained, expected)[0m
+32:  }
+values are not the same
+[1m=> Obtained[0m
+List(
+  Course(
+    id = 8f930a62-c673-4bd6-9478-3b9dc145c0be,
+    name = "Intro to Compilers"
+  ),
+  Course(
+    id = b11d4f3a-60c0-40ab-8ae2-7634bf456ba7,
+    name = "Data Structures"
+  )
+)
+[1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+     name = "Intro to Compilers"
+[91m-  ),[0m
+[91m-  Course([0m
+[91m-    id = b11d4f3a-60c0-40ab-8ae2-7634bf456ba7,[0m
+[91m-    name = "Data Structures"[0m
+   )
+2020.06.05 18:52:15 INFO  ===============================================
+2020.06.05 18:53:26 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:53:28 INFO  time: compiled course-store-test in 2.11s
+2020.06.05 18:53:29 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:53:29 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:53:29 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:53:30 INFO  Listening for transport dt_socket at address: 59452
+2020.06.05 18:53:30 INFO  Trying to attach to remote debuggee VM localhost:59452 .
+2020.06.05 18:53:30 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:53:31 INFO  9c19ea5e-4847-43eb-a52b-9488a23e8afa
+2020.06.05 18:53:31 INFO  [32mMySuite:[0m
+2020.06.05 18:53:32 INFO  [32m  + [0m[32mget Course[0m [90m0.789s[0m
+2020.06.05 18:53:32 INFO  [32m  + [0m[32mget Course find none[0m [90m0.001s[0m
+2020.06.05 18:53:32 INFO  [91m==> X [0m[91mMySuite[0m.[91mget Courses[0m  [90m0.198s[0m munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:31
+2020.06.05 18:53:32 INFO  30:    val expected = List(c1)
+2020.06.05 18:53:32 INFO  [7m31:    assertEquals(obtained, expected)[0m
+2020.06.05 18:53:32 INFO  32:  }
+2020.06.05 18:53:32 INFO  values are not the same
+2020.06.05 18:53:32 INFO  [1m=> Obtained[0m
+2020.06.05 18:53:32 INFO  List(
+2020.06.05 18:53:32 INFO    Course(
+2020.06.05 18:53:32 INFO      id = 9e92f4d3-85a1-4680-8bdc-af276228b358,
+2020.06.05 18:53:32 INFO      name = "Intro to Compilers"
+2020.06.05 18:53:32 INFO    ),
+2020.06.05 18:53:32 INFO    Course(
+2020.06.05 18:53:32 INFO      id = 4ba70c22-4a86-447c-b922-cfd8fa8b92a1,
+2020.06.05 18:53:32 INFO      name = "Data Structures"
+2020.06.05 18:53:32 INFO    )
+2020.06.05 18:53:32 INFO  )
+2020.06.05 18:53:32 INFO  [1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+2020.06.05 18:53:32 INFO       name = "Intro to Compilers"
+2020.06.05 18:53:32 INFO  [91m-  ),[0m
+2020.06.05 18:53:32 INFO  [91m-  Course([0m
+2020.06.05 18:53:32 INFO  [91m-    id = 4ba70c22-4a86-447c-b922-cfd8fa8b92a1,[0m
+2020.06.05 18:53:32 INFO  [91m-    name = "Data Structures"[0m
+2020.06.05 18:53:32 INFO     )
+2020.06.05 18:53:32 INFO  [90m    at [0m[90mmunit.FunSuite.assertEquals[0m[90m([0m[90mFunSuite.scala[0m:[90m11[0m[90m)[0m
+2020.06.05 18:53:32 INFO  [1m    at [0m[1mMySuite.$anonfun$new$5[0m[1m([0m[1mCourseReposTest.scala[0m:[1m31[0m[1m)[0m
+2020.06.05 18:53:32 INFO  Execution took 0.99s
+2020.06.05 18:53:32 INFO  3 tests, 2 passed, 1 failed
+2020.06.05 18:53:32 INFO  
+2020.06.05 18:53:32 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:53:32 INFO  ===============================================
+2020.06.05 18:53:32 INFO  Total duration: 0.99s
+2020.06.05 18:53:32 INFO  1 failed
+2020.06.05 18:53:32 INFO  
+2020.06.05 18:53:32 INFO  Failed:
+2020.06.05 18:53:32 INFO  - MySuite:
+2020.06.05 18:53:32 INFO    * MySuite.get Courses - munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:31
+30:    val expected = List(c1)
+[7m31:    assertEquals(obtained, expected)[0m
+32:  }
+values are not the same
+[1m=> Obtained[0m
+List(
+  Course(
+    id = 9e92f4d3-85a1-4680-8bdc-af276228b358,
+    name = "Intro to Compilers"
+  ),
+  Course(
+    id = 4ba70c22-4a86-447c-b922-cfd8fa8b92a1,
+    name = "Data Structures"
+  )
+)
+[1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+     name = "Intro to Compilers"
+[91m-  ),[0m
+[91m-  Course([0m
+[91m-    id = 4ba70c22-4a86-447c-b922-cfd8fa8b92a1,[0m
+[91m-    name = "Data Structures"[0m
+   )
+2020.06.05 18:53:32 INFO  ===============================================
+2020.06.05 18:54:23 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:54:25 INFO  time: compiled course-store-test in 1.96s
+2020.06.05 18:54:26 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:54:26 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:54:26 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:54:26 INFO  Listening for transport dt_socket at address: 59476
+2020.06.05 18:54:26 INFO  Trying to attach to remote debuggee VM localhost:59476 .
+2020.06.05 18:54:26 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:54:27 INFO  3afa3b47-adfc-4d9a-bdb2-b9647a301242
+2020.06.05 18:54:27 INFO  8fbd4439-f3b9-48b1-ae7f-15db7ce6c7d3
+2020.06.05 18:54:27 INFO  56a7c107-1908-488e-acdc-c0c01aa9d350
+2020.06.05 18:54:27 INFO  [32mMySuite:[0m
+2020.06.05 18:54:28 INFO  [32m  + [0m[32mget Course[0m [90m0.767s[0m
+2020.06.05 18:54:28 INFO  [32m  + [0m[32mget Course find none[0m [90m0.001s[0m
+2020.06.05 18:54:28 INFO  [91m==> X [0m[91mMySuite[0m.[91mget Courses[0m  [90m0.19s[0m munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:35
+2020.06.05 18:54:28 INFO  34:    val expected = List(c1)
+2020.06.05 18:54:28 INFO  [7m35:    assertEquals(obtained, expected)[0m
+2020.06.05 18:54:28 INFO  36:  }
+2020.06.05 18:54:28 INFO  values are not the same
+2020.06.05 18:54:28 INFO  [1m=> Obtained[0m
+2020.06.05 18:54:28 INFO  List(
+2020.06.05 18:54:28 INFO    Course(
+2020.06.05 18:54:28 INFO      id = 793eb9b7-9592-483b-b26a-daf8130143ba,
+2020.06.05 18:54:28 INFO      name = "Intro to Compilers"
+2020.06.05 18:54:28 INFO    ),
+2020.06.05 18:54:28 INFO    Course(
+2020.06.05 18:54:28 INFO      id = 84ff360f-f32d-4c7e-b01e-cbb05f4a3b25,
+2020.06.05 18:54:28 INFO      name = "Data Structures"
+2020.06.05 18:54:28 INFO    )
+2020.06.05 18:54:28 INFO  )
+2020.06.05 18:54:28 INFO  [1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+2020.06.05 18:54:28 INFO       name = "Intro to Compilers"
+2020.06.05 18:54:28 INFO  [91m-  ),[0m
+2020.06.05 18:54:28 INFO  [91m-  Course([0m
+2020.06.05 18:54:28 INFO  [91m-    id = 84ff360f-f32d-4c7e-b01e-cbb05f4a3b25,[0m
+2020.06.05 18:54:28 INFO  [91m-    name = "Data Structures"[0m
+2020.06.05 18:54:28 INFO     )
+2020.06.05 18:54:28 INFO  [90m    at [0m[90mmunit.FunSuite.assertEquals[0m[90m([0m[90mFunSuite.scala[0m:[90m11[0m[90m)[0m
+2020.06.05 18:54:28 INFO  [1m    at [0m[1mMySuite.$anonfun$new$5[0m[1m([0m[1mCourseReposTest.scala[0m:[1m35[0m[1m)[0m
+2020.06.05 18:54:28 INFO  Execution took 0.96s
+2020.06.05 18:54:28 INFO  3 tests, 2 passed, 1 failed
+2020.06.05 18:54:28 INFO  
+2020.06.05 18:54:29 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:54:28 INFO  ===============================================
+2020.06.05 18:54:28 INFO  Total duration: 0.96s
+2020.06.05 18:54:28 INFO  1 failed
+2020.06.05 18:54:28 INFO  
+2020.06.05 18:54:28 INFO  Failed:
+2020.06.05 18:54:28 INFO  - MySuite:
+2020.06.05 18:54:28 INFO    * MySuite.get Courses - munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:35
+34:    val expected = List(c1)
+[7m35:    assertEquals(obtained, expected)[0m
+36:  }
+values are not the same
+[1m=> Obtained[0m
+List(
+  Course(
+    id = 793eb9b7-9592-483b-b26a-daf8130143ba,
+    name = "Intro to Compilers"
+  ),
+  Course(
+    id = 84ff360f-f32d-4c7e-b01e-cbb05f4a3b25,
+    name = "Data Structures"
+  )
+)
+[1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+     name = "Intro to Compilers"
+[91m-  ),[0m
+[91m-  Course([0m
+[91m-    id = 84ff360f-f32d-4c7e-b01e-cbb05f4a3b25,[0m
+[91m-    name = "Data Structures"[0m
+   )
+2020.06.05 18:54:28 INFO  ===============================================
+2020.06.05 18:55:04 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:55:06 INFO  time: compiled course-store-test in 1.99s
+2020.06.05 18:55:16 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:55:18 INFO  time: compiled course-store-test in 2.07s
+2020.06.05 18:56:32 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:56:34 INFO  time: compiled course-store-test in 2.01s
+2020.06.05 18:57:11 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:57:13 INFO  time: compiled course-store-test in 2.5s
+2020.06.05 18:57:16 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:57:16 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:57:16 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:57:16 INFO  Listening for transport dt_socket at address: 59568
+2020.06.05 18:57:16 INFO  Trying to attach to remote debuggee VM localhost:59568 .
+2020.06.05 18:57:16 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:57:18 INFO  [32mMySuite:[0m
+2020.06.05 18:57:18 INFO  [32m  + [0m[32mget Course[0m [90m0.888s[0m
+2020.06.05 18:57:18 INFO  [32m  + [0m[32mget Course find none[0m [90m0.005s[0m
+2020.06.05 18:57:19 INFO  [91m==> X [0m[91mMySuite[0m.[91mget Courses[0m  [90m0.232s[0m munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:32
+2020.06.05 18:57:19 INFO  31:    val expected = List(c1)
+2020.06.05 18:57:19 INFO  [7m32:    assertEquals(obtained, expected)[0m
+2020.06.05 18:57:19 INFO  33:  }
+2020.06.05 18:57:19 INFO  values are not the same
+2020.06.05 18:57:19 INFO  [1m=> Obtained[0m
+2020.06.05 18:57:19 INFO  List(
+2020.06.05 18:57:19 INFO    Course(
+2020.06.05 18:57:19 INFO      id = 3afa3b47-adfc-4d9a-bdb2-b9647a301242,
+2020.06.05 18:57:19 INFO      name = "Intro to Compilers"
+2020.06.05 18:57:19 INFO    ),
+2020.06.05 18:57:19 INFO    Course(
+2020.06.05 18:57:19 INFO      id = 8fbd4439-f3b9-48b1-ae7f-15db7ce6c7d3,
+2020.06.05 18:57:19 INFO      name = "Data Structures"
+2020.06.05 18:57:19 INFO    )
+2020.06.05 18:57:19 INFO  )
+2020.06.05 18:57:19 INFO  [1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+2020.06.05 18:57:19 INFO       name = "Intro to Compilers"
+2020.06.05 18:57:19 INFO  [91m-  ),[0m
+2020.06.05 18:57:19 INFO  [91m-  Course([0m
+2020.06.05 18:57:19 INFO  [91m-    id = 8fbd4439-f3b9-48b1-ae7f-15db7ce6c7d3,[0m
+2020.06.05 18:57:19 INFO  [91m-    name = "Data Structures"[0m
+2020.06.05 18:57:19 INFO     )
+2020.06.05 18:57:19 INFO  [90m    at [0m[90mmunit.FunSuite.assertEquals[0m[90m([0m[90mFunSuite.scala[0m:[90m11[0m[90m)[0m
+2020.06.05 18:57:19 INFO  [1m    at [0m[1mMySuite.$anonfun$new$5[0m[1m([0m[1mCourseReposTest.scala[0m:[1m32[0m[1m)[0m
+2020.06.05 18:57:19 INFO  Execution took 1.12s
+2020.06.05 18:57:19 INFO  3 tests, 2 passed, 1 failed
+2020.06.05 18:57:19 INFO  
+2020.06.05 18:57:19 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:57:19 INFO  ===============================================
+2020.06.05 18:57:19 INFO  Total duration: 1.12s
+2020.06.05 18:57:19 INFO  1 failed
+2020.06.05 18:57:19 INFO  
+2020.06.05 18:57:19 INFO  Failed:
+2020.06.05 18:57:19 INFO  - MySuite:
+2020.06.05 18:57:19 INFO    * MySuite.get Courses - munit.FailException: /Users/kidaneweldemariam/code/playground/course-store/src/test/scala/repository/CourseReposTest.scala:32
+31:    val expected = List(c1)
+[7m32:    assertEquals(obtained, expected)[0m
+33:  }
+values are not the same
+[1m=> Obtained[0m
+List(
+  Course(
+    id = 3afa3b47-adfc-4d9a-bdb2-b9647a301242,
+    name = "Intro to Compilers"
+  ),
+  Course(
+    id = 8fbd4439-f3b9-48b1-ae7f-15db7ce6c7d3,
+    name = "Data Structures"
+  )
+)
+[1m=> Diff[0m ([91m- obtained[0m, [92m+ expected[0m)
+     name = "Intro to Compilers"
+[91m-  ),[0m
+[91m-  Course([0m
+[91m-    id = 8fbd4439-f3b9-48b1-ae7f-15db7ce6c7d3,[0m
+[91m-    name = "Data Structures"[0m
+   )
+2020.06.05 18:57:19 INFO  ===============================================
+2020.06.05 18:57:52 INFO  compiling course-store-test (1 scala source)
+2020.06.05 18:57:54 INFO  time: compiled course-store-test in 2.09s
+2020.06.05 18:57:55 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 18:57:55 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 18:57:55 INFO  Starting debug proxy for [MySuite]
+2020.06.05 18:57:54 INFO  Listening for transport dt_socket at address: 59588
+2020.06.05 18:57:54 INFO  Trying to attach to remote debuggee VM localhost:59588 .
+2020.06.05 18:57:54 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 18:57:57 INFO  [32mMySuite:[0m
+2020.06.05 18:57:57 INFO  [32m  + [0m[32mget Course[0m [90m0.751s[0m
+2020.06.05 18:57:57 INFO  [32m  + [0m[32mget Course find none[0m [90m0.004s[0m
+2020.06.05 18:57:57 INFO  [32m  + [0m[32mget Courses[0m [90m0.047s[0m
+2020.06.05 18:57:57 INFO  Execution took 0.8s
+2020.06.05 18:57:57 INFO  3 tests, 3 passed
+2020.06.05 18:57:57 INFO  All tests in MySuite passed
+2020.06.05 18:57:57 INFO  
+2020.06.05 18:57:58 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 18:57:57 INFO  ===============================================
+2020.06.05 18:57:57 INFO  Total duration: 0.8s
+2020.06.05 18:57:57 INFO  All 1 test suites passed.
+2020.06.05 18:57:57 INFO  ===============================================
+2020.06.05 18:59:39 INFO  compiling course-store (1 scala source)
+2020.06.05 18:59:41 WARN  there was one deprecation warning (since 2.13.0); re-run with -deprecation for details
+2020.06.05 18:59:41 INFO  time: compiled course-store in 2.25s
+2020.06.05 19:02:03 INFO  compiling course-store-test (1 scala source)
+2020.06.05 19:02:05 INFO  time: compiled course-store-test in 1.85s
+2020.06.05 19:02:11 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 19:02:11 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 19:02:11 INFO  Starting debug proxy for [MySuite]
+2020.06.05 19:02:11 INFO  Listening for transport dt_socket at address: 59671
+2020.06.05 19:02:11 INFO  Trying to attach to remote debuggee VM localhost:59671 .
+2020.06.05 19:02:11 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 19:02:12 INFO  [32mMySuite:[0m
+2020.06.05 19:02:12 INFO  [32m  + [0m[32mget Course[0m [90m0.663s[0m
+2020.06.05 19:02:12 INFO  [32m  + [0m[32mget Course find none[0m [90m0.004s[0m
+2020.06.05 19:02:12 INFO  [32m  + [0m[32mget Courses[0m [90m0.043s[0m
+2020.06.05 19:02:12 INFO  [32m  + [0m[32mCreate a TDD Course[0m [90m0.003s[0m
+2020.06.05 19:02:12 INFO  Execution took 0.71s
+2020.06.05 19:02:12 INFO  4 tests, 4 passed
+2020.06.05 19:02:12 INFO  All tests in MySuite passed
+2020.06.05 19:02:12 INFO  
+2020.06.05 19:02:13 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 19:02:12 INFO  ===============================================
+2020.06.05 19:02:12 INFO  Total duration: 0.71s
+2020.06.05 19:02:12 INFO  All 1 test suites passed.
+2020.06.05 19:02:12 INFO  ===============================================
+2020.06.05 19:03:09 INFO  compiling course-store-test (1 scala source)
+2020.06.05 19:03:11 INFO  time: compiled course-store-test in 1.95s
+2020.06.05 19:03:12 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2020.06.05 19:03:13 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/kidaneweldemariam/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2020.06.05 19:03:12 INFO  Starting debug proxy for [MySuite]
+2020.06.05 19:03:13 INFO  Listening for transport dt_socket at address: 59698
+2020.06.05 19:03:13 INFO  Trying to attach to remote debuggee VM localhost:59698 .
+2020.06.05 19:03:13 INFO  Attaching to debuggee VM succeeded.
+2020.06.05 19:03:14 INFO  [32mMySuite:[0m
+2020.06.05 19:03:14 INFO  [32m  + [0m[32mget Course[0m [90m0.766s[0m
+2020.06.05 19:03:14 INFO  [32m  + [0m[32mget Course find none[0m [90m0.004s[0m
+2020.06.05 19:03:14 INFO  [32m  + [0m[32mget Courses[0m [90m0.044s[0m
+2020.06.05 19:03:14 INFO  HashMap(8fbd4439-f3b9-48b1-ae7f-15db7ce6c7d3 -> Course(8fbd4439-f3b9-48b1-ae7f-15db7ce6c7d3,Data Structures), 5a7de0f7-d814-4fe3-aaa9-c4e8f5340aee -> Course(5a7de0f7-d814-4fe3-aaa9-c4e8f5340aee,Intro to TDD), 3afa3b47-adfc-4d9a-bdb2-b9647a301242 -> Course(3afa3b47-adfc-4d9a-bdb2-b9647a301242,Intro to Compilers))
+2020.06.05 19:03:14 INFO  [32m  + [0m[32mCreate a TDD Course[0m [90m0.015s[0m
+2020.06.05 19:03:14 INFO  Execution took 0.83s
+2020.06.05 19:03:14 INFO  4 tests, 4 passed
+2020.06.05 19:03:14 INFO  All tests in MySuite passed
+2020.06.05 19:03:14 INFO  
+2020.06.05 19:03:15 INFO  Canceling debug proxy for [MySuite]
+2020.06.05 19:03:14 INFO  ===============================================
+2020.06.05 19:03:14 INFO  Total duration: 0.83s
+2020.06.05 19:03:14 INFO  All 1 test suites passed.
+2020.06.05 19:03:14 INFO  ===============================================
+2020.06.05 19:04:05 INFO  compiling course-store-test (1 scala source)
+2020.06.05 19:04:09 INFO  time: compiled course-store-test in 3.62s
+Jun 05, 2020 7:06:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification

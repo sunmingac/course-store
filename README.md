@@ -9,3 +9,5 @@ This project will use only type-level, best and latest library to build services
 * docker/k8s for deployment to google gcp
 
 Course Shopping
+
+https://github.com/tpolecat/skunk

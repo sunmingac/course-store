@@ -10,7 +10,7 @@ import scala.collection.mutable.Map
 
 trait CourseRepo[F[_]] {
     def getCourse(id: UUID): F[Option[Course]]
-    def getCourses(ids: List[UUID]): F[List[Course]]
+    def getCourses(ids: List[UUID])(implicit F: Applicative[F]): F[List[Course]] = ids.traverse(getCourse).map(_.flatten)
     def createCourse(name: String): F[Course]
     def deleteCouse(id: UUID): F[Unit]
     def modifyCourse(id: UUID, course: Course): F[Option[Course]]
@@ -21,8 +21,6 @@ case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(implicit F: Sync[F]) ex
     override def getCourse(id: ju.UUID): F[Option[Course]] = F.delay {
         env.get(id)
     }
-    
-    override def getCourses(ids: List[ju.UUID]): F[List[Course]] = ids.traverse(getCourse).map(_.flatten)
     
     override def deleteCouse(id: ju.UUID): F[Unit] = F.delay {
         env.-(id)

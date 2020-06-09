@@ -8,3 +8,23 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "postgres"
       POSTGRES_DB: "course-store"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "5050:80"
+    # volumes:
+    #   - ./conf/pgadmin4/servers.json:/pgadmin4/servers.json
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "postgres"
+    depends_on:
+      - db
+
+  flyway:
+    image: flyway/flyway
+    command: -url=jdbc:postgresql://db/course-store -schemas=public -user=postgres -password=postgres -connectRetries=60 migrate
+    volumes:
+      - ./conf/flyway/sql:/flyway/sql
+    depends_on:
+      - db

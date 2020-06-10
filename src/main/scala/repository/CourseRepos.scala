@@ -7,6 +7,10 @@ import cats.effect._
 import cats.effect.implicits._
 import java.{util => ju}
 import scala.collection.mutable.Map
+import skunk._
+import skunk.implicits._
+import skunk.codec.all._
+import scala.NotImplementedError
 
 trait CourseRepo[F[_]] {
     def getCourse(id: UUID): F[Option[Course]]
@@ -16,7 +20,7 @@ trait CourseRepo[F[_]] {
     def modifyCourse(id: UUID, course: Course): F[Option[Course]]
 }
 
-case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(implicit F: Sync[F]) extends CourseRepo[F]{
+final case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(implicit F: Sync[F]) extends CourseRepo[F]{
 
     override def getCourse(id: ju.UUID): F[Option[Course]] = F.delay {
         env.get(id)
@@ -38,5 +42,36 @@ case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(implicit F: Sync[F]) ex
         env += (id -> course)
         course
     }
+}
+
+final case class CourseRepoSkunk[F[_]: Sync](session: Session[F]) extends CourseRepo[F] {
+
+  override def getCourse(id: ju.UUID): F[Option[Course]] = {
+    val courseDecoder: Decoder[Course] = (uuid ~ varchar).map { case (i, n) => Course(i, n) }
+
+    val query: Query[UUID, Course] = 
+        sql"SELECT ID, NAME FROM COURSE WHERE ID = $uuid"
+        .query(courseDecoder)
+    
+    session.prepare(query).use(_.option(id))
+  }
+
+  override def createCourse(name: String): F[Course] = {
+    val insert: Command[Course] = 
+        sql"INSERT INTO COURSE (ID, NAME) VALUES ($uuid, $varchar)"
+        .command
+        .contramap(c => c.id ~ c.name)
+
+    val course = Course(UUID.randomUUID(), name)
+
+    for {
+        _ <- session.prepare(insert).use(_.execute(course))
+    } yield course
+  }
+
+  override def deleteCouse(id: ju.UUID): F[Unit] = Sync[F].raiseError(new NotImplementedError)
+
+  override def modifyCourse(id: ju.UUID, course: Course): F[Option[Course]] = Sync[F].raiseError(new NotImplementedError)
+
 
 }

@@ -7,7 +7,7 @@ ThisBuild / organizationName := "kan"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "course-store"
+    name := "shopping-cart"
   )
   .aggregate(core, tests)
 
@@ -30,7 +30,7 @@ lazy val tests = (project in file("modules/tests"))
   )
   .dependsOn(core)
 
-lazy val core = (project in file("."))
+lazy val core = (project in file("modules/core"))
   .enablePlugins(DockerPlugin)
   .enablePlugins(AshScriptPlugin)
   .settings(

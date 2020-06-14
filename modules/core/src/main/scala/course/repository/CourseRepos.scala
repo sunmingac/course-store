@@ -1,6 +1,6 @@
-package repository
+package course.repository
 import java.util.UUID
-import model._
+import course.model._
 import cats._
 import cats.implicits._
 import cats.effect._

@@ -1,4 +1,4 @@
-package model
+package course.model
 import java.util.UUID
 import io.circe._, io.circe.parser._, io.circe.syntax._, io.circe.generic.semiauto._
 

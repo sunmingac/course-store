@@ -6,7 +6,7 @@ import skunk.implicits._
 import skunk.codec.all._
 import natchez.Trace.Implicits.noop
 import java.util.UUID
-import model.Course
+import course.model._
 
 object Hello extends IOApp {
 

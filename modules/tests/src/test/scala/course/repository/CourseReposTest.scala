@@ -1,4 +1,4 @@
-package repository
+package course.repository
 
 import repository._
 import java.util.UUID

@@ -6,14 +6,14 @@ import skunk.implicits._
 import skunk.codec.all._
 import natchez.Trace.Implicits.noop
 import java.util.UUID
-import model.Course
-import repository._
+import course.model._
+import course.repository._
 import cats.effect._
 import org.http4s.HttpRoutes
 import org.http4s.dsl.io._
 import org.http4s.implicits._
 import org.http4s.server.blaze._
-import scala.concurrent.ExecutionContext.global
+import scala.concurrent.ExecutionContext.Implicits._
 
 object Server extends IOApp {
 
@@ -40,12 +40,14 @@ object Server extends IOApp {
   //   }
   // }
 
-  val server = new CourseRoutes[IO]
+  import course.http.CourseRoutes
+  
+  val server = new CourseRoutes[IO].routes
 
   def run(args: List[String]): IO[ExitCode] =
-    BlazeServerBuilder[IO](global)
+    BlazeServerBuilder[IO]
       .bindHttp(8080, "localhost")
-      .withHttpApp(server.CourseRoutes)
+      .withHttpApp(server)
       .serve
       .compile
       .drain

@@ -5,11 +5,6 @@ ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "dev.kan"
 ThisBuild / organizationName := "kan"
 
-resolvers += Resolver.sonatypeRepo("snapshots")
-
-// Use %%% for non-JVM projects.
-testFrameworks += new TestFramework("munit.Framework")
-
 lazy val root = (project in file("."))
   .settings(
     name := "course-store"
@@ -23,6 +18,8 @@ lazy val tests = (project in file("modules/tests"))
     scalacOptions += "-Ymacro-annotations",
     scalafmtOnCompile := true,
     Defaults.itSettings,
+    resolvers += Resolver.sonatypeRepo("snapshots"),
+    testFrameworks += new TestFramework("munit.Framework"),
     libraryDependencies ++= Seq(
           compilerPlugin(Libraries.kindProjector cross CrossVersion.full),
           compilerPlugin(Libraries.betterMonadicFor),

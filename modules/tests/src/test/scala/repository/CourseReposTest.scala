@@ -1,3 +1,5 @@
+package repository
+
 import repository._
 import java.util.UUID
 import cats.effect._

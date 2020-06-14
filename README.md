@@ -11,3 +11,12 @@ This project will use only type-level, best and latest library to build services
 Course Shopping
 
 https://github.com/tpolecat/skunk
+
+## TODO
+* Domain modeling
+* Persistnece layer
+* Api layer -<>
+* jwt based token ...
+* Graphql
+* dockerise
+* GCP

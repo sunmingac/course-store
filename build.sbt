@@ -40,11 +40,9 @@ lazy val core = (project in file("modules/core"))
     scalacOptions ++= Seq(
       "-Ymacro-annotations",
       "-encoding", "UTF-8",
-      "-unchecked",
       "-deprecation",
       "-Ywarn-dead-code",
-      "-Ywarn-numeric-widen",
-      "-Ywarn-value-discard"
+      "-Ywarn-numeric-widen"
       ),
     scalafmtOnCompile := true,
     resolvers += Resolver.sonatypeRepo("snapshots"),

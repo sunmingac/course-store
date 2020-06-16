@@ -16,7 +16,6 @@ lazy val tests = (project in file("modules/tests"))
   .settings(
     name := "shopping-cart-test-suite",
     scalacOptions += "-Ymacro-annotations",
-    scalafmtOnCompile := true,
     Defaults.itSettings,
     resolvers += Resolver.sonatypeRepo("snapshots"),
     testFrameworks += new TestFramework("munit.Framework"),
@@ -38,13 +37,16 @@ lazy val core = (project in file("modules/core"))
     name := "shopping-cart-core",
     packageName in Docker := "shopping-cart",
     scalacOptions ++= Seq(
-      "-Ymacro-annotations",
-      "-encoding", "UTF-8",
       "-deprecation",
+      "-encoding", "UTF-8",
+      "-feature",
+      "-language:_",
+      "-unchecked",
+      "-Xlint",
       "-Ywarn-dead-code",
-      "-Ywarn-numeric-widen"
-      ),
-    scalafmtOnCompile := true,
+      "-Ywarn-numeric-widen",
+      "-Ywarn-value-discard"
+    ),
     resolvers += Resolver.sonatypeRepo("snapshots"),
     Defaults.itSettings,
     dockerBaseImage := "openjdk:8u201-jre-alpine3.9",

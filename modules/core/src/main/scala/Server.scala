@@ -1,19 +1,17 @@
 import cats.effect._
-import cats.implicits._
-import cats.effect.implicits._
-import skunk._
-import skunk.implicits._
-import skunk.codec.all._
-import natchez.Trace.Implicits.noop
-import java.util.UUID
-import course.model._
-import course.repository._
-import cats.effect._
-import org.http4s.HttpRoutes
-import org.http4s.dsl.io._
-import org.http4s.implicits._
+// import skunk._
+// import skunk.implicits._
+// import skunk.codec.all._
+// import natchez.Trace.Implicits.noop
+// import java.util.UUID
+// import course.model._
+// import course.repository._
+// import cats.effect._
+// import org.http4s.HttpRoutes
+// import org.http4s.dsl.io._
+// import org.http4s.implicits._
 import org.http4s.server.blaze._
-import scala.concurrent.ExecutionContext.Implicits._
+// import scala.concurrent.ExecutionContext.Implicits._
 
 object Server extends IOApp {
 
@@ -41,7 +39,7 @@ object Server extends IOApp {
   // }
 
   import course.http.CourseRoutes
-  
+
   val server = new CourseRoutes[IO].routes
 
   def run(args: List[String]): IO[ExitCode] =

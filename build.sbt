@@ -25,7 +25,8 @@ lazy val tests = (project in file("modules/tests"))
           compilerPlugin(Libraries.betterMonadicFor),
           Libraries.scalaCheck,
           Libraries.scalaTest,
-          Libraries.scalaTestPlus
+          Libraries.scalaTestPlus,
+          Libraries.munitTest
         )
   )
   .dependsOn(core)
@@ -36,7 +37,15 @@ lazy val core = (project in file("modules/core"))
   .settings(
     name := "shopping-cart-core",
     packageName in Docker := "shopping-cart",
-    scalacOptions += "-Ymacro-annotations",
+    scalacOptions ++= Seq(
+      "-Ymacro-annotations",
+      "-encoding", "UTF-8",
+      "-unchecked",
+      "-deprecation",
+      "-Ywarn-dead-code",
+      "-Ywarn-numeric-widen",
+      "-Ywarn-value-discard"
+      ),
     scalafmtOnCompile := true,
     resolvers += Resolver.sonatypeRepo("snapshots"),
     Defaults.itSettings,

@@ -4,8 +4,7 @@ import course.model._
 import cats._
 import cats.implicits._
 import cats.effect._
-import cats.effect.implicits._
-import java.{ util => ju }
+import java.{util => ju}
 import scala.collection.mutable.Map
 import skunk._
 import skunk.implicits._
@@ -14,13 +13,16 @@ import scala.NotImplementedError
 
 trait CourseRepo[F[_]] {
   def getCourse(id: UUID): F[Option[Course]]
-  def getCourses(ids: List[UUID])(implicit F: Applicative[F]): F[List[Course]] = ids.traverse(getCourse).map(_.flatten)
+  def getCourses(ids: List[UUID])(implicit F: Applicative[F]): F[List[Course]] =
+    ids.traverse(getCourse).map(_.flatten)
   def createCourse(name: String): F[Course]
   def deleteCouse(id: UUID): F[Unit]
   def modifyCourse(id: UUID, course: Course): F[Option[Course]]
 }
 
-final case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(implicit F: Sync[F]) extends CourseRepo[F] {
+final case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(
+    implicit F: Sync[F]
+) extends CourseRepo[F] {
 
   override def getCourse(id: ju.UUID): F[Option[Course]] = F.delay {
     env.get(id)
@@ -28,6 +30,8 @@ final case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(implicit F: Sync[
 
   override def deleteCouse(id: ju.UUID): F[Unit] = F.delay {
     env.-(id)
+    ()
+
   }
 
   override def modifyCourse(id: ju.UUID, course: Course): F[Option[Course]] = {
@@ -37,17 +41,20 @@ final case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(implicit F: Sync[
   }
 
   override def createCourse(name: String): F[Course] = F.delay {
-    val id     = UUID.randomUUID()
+    val id = UUID.randomUUID()
     val course = Course(id, name)
     env += (id -> course)
     course
   }
 }
 
-final case class CourseRepoSkunk[F[_]: Sync](session: Session[F]) extends CourseRepo[F] {
+final case class CourseRepoSkunk[F[_]: Sync](session: Session[F])
+    extends CourseRepo[F] {
 
   override def getCourse(id: ju.UUID): F[Option[Course]] = {
-    val courseDecoder: Decoder[Course] = (uuid ~ varchar).map { case (i, n) => Course(i, n) }
+    val courseDecoder: Decoder[Course] = (uuid ~ varchar).map {
+      case (i, n) => Course(i, n)
+    }
 
     val query: Query[UUID, Course] =
       sql"SELECT ID, NAME FROM COURSE WHERE ID = $uuid"
@@ -68,7 +75,8 @@ final case class CourseRepoSkunk[F[_]: Sync](session: Session[F]) extends Course
     } yield course
   }
 
-  override def deleteCouse(id: ju.UUID): F[Unit] = Sync[F].raiseError(new NotImplementedError)
+  override def deleteCouse(id: ju.UUID): F[Unit] =
+    Sync[F].raiseError(new NotImplementedError)
 
   override def modifyCourse(id: ju.UUID, course: Course): F[Option[Course]] =
     Sync[F].raiseError(new NotImplementedError)

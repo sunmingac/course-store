@@ -1,10 +1,9 @@
 package course.repository
 
-import repository._
 import java.util.UUID
 import cats.effect._
 import scala.collection.mutable.Map
-import model.Course
+import course.model._
 import cats.implicits._
 
 class MySuite extends munit.FunSuite {

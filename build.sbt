@@ -36,17 +36,7 @@ lazy val core = (project in file("modules/core"))
   .settings(
     name := "shopping-cart-core",
     packageName in Docker := "shopping-cart",
-    scalacOptions ++= Seq(
-      "-deprecation",
-      "-encoding", "UTF-8",
-      "-feature",
-      "-language:_",
-      "-unchecked",
-      "-Xlint",
-      "-Ywarn-dead-code",
-      "-Ywarn-numeric-widen",
-      "-Ywarn-value-discard"
-    ),
+    scalacOptions in (Compile, console) --= Seq("-Ywarn-unused:imports", "-Xfatal-warnings", "nowarn"),
     resolvers += Resolver.sonatypeRepo("snapshots"),
     Defaults.itSettings,
     dockerBaseImage := "openjdk:8u201-jre-alpine3.9",

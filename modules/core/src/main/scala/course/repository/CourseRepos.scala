@@ -10,6 +10,7 @@ import skunk._
 import skunk.implicits._
 import skunk.codec.all._
 import scala.NotImplementedError
+import scala.collection.mutable.Map
 
 trait CourseRepo[F[_]] {
   def getCourse(id: UUID): F[Option[Course]]
@@ -29,9 +30,8 @@ final case class CourseRepoInMem[F[_]](env: Map[UUID, Course])(
   }
 
   override def deleteCouse(id: ju.UUID): F[Unit] = F.delay {
-    env.-(id)
+    env.remove(id)
     ()
-
   }
 
   override def modifyCourse(id: ju.UUID, course: Course): F[Option[Course]] = {

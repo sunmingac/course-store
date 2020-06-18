@@ -1,11 +1,11 @@
 package course.repository
 
-import repository._
 import java.util.UUID
+import course.model.Course
 import cats.effect._
-import scala.collection.mutable.Map
-import model.Course
 import cats.implicits._
+
+import scala.collection.mutable.Map
 
 class MySuite extends munit.FunSuite {
   val id1 = UUID.fromString("3afa3b47-adfc-4d9a-bdb2-b9647a301242")

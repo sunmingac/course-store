@@ -7,14 +7,14 @@ ThisBuild / organizationName := "kan"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "shopping-cart"
+    name := "course-store"
   )
   .aggregate(core, tests)
 
 lazy val tests = (project in file("modules/tests"))
   .configs(IntegrationTest)
   .settings(
-    name := "shopping-cart-test-suite",
+    name := "course-store-test-suite",
     scalacOptions += "-Ymacro-annotations",
     Defaults.itSettings,
     resolvers += Resolver.sonatypeRepo("snapshots"),
@@ -34,8 +34,8 @@ lazy val core = (project in file("modules/core"))
   .enablePlugins(DockerPlugin)
   .enablePlugins(AshScriptPlugin)
   .settings(
-    name := "shopping-cart-core",
-    packageName in Docker := "shopping-cart",
+    name := "course-store-core",
+    packageName in Docker := "course-store",
     scalacOptions in (Compile, console) --= Seq("-Ywarn-unused:imports", "-Xfatal-warnings", "nowarn"),
     resolvers += Resolver.sonatypeRepo("snapshots"),
     Defaults.itSettings,

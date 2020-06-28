@@ -19,6 +19,7 @@ object Dependencies {
     val redis4cats    = "0.10.0"
     val skunk         = "0.0.9"
     val squants       = "1.6.0"
+    val tapir         = "0.16.1"
 
     val betterMonadicFor = "0.3.1"
     val kindProjector    = "0.11.0"
@@ -34,6 +35,7 @@ object Dependencies {
     def circe(artifact: String): ModuleID  = "io.circe"   %% artifact % Versions.circe
     def ciris(artifact: String): ModuleID  = "is.cir"     %% artifact % Versions.ciris
     def http4s(artifact: String): ModuleID = "org.http4s" %% artifact % Versions.http4s
+    def tapir(artifact: String): ModuleID = "com.softwaremill.sttp.tapir" %% artifact % Versions.tapir
 
     val cats        = "org.typelevel"    %% "cats-core"     % Versions.cats
     val catsMeowMtl = "com.olegpy"       %% "meow-mtl-core" % Versions.catsMeowMtl
@@ -71,6 +73,13 @@ object Dependencies {
 
     val skunkCore  = "org.tpolecat" %% "skunk-core"  % Versions.skunk
     val skunkCirce = "org.tpolecat" %% "skunk-circe" % Versions.skunk
+
+    val tapirCore = tapir("tapir-core")
+    val tapirHttp4sServer = tapir("tapir-http4s-server")
+    val tapirJsonCirce = tapir("tapir-json-circe")
+    val tapirOpenapiDocs = tapir("tapir-openapi-docs")
+    val tapirCirceYaml= tapir("tapir-openapi-circe-yaml")
+    val tapirSwaggerUiHttp4s= tapir("tapir-swagger-ui-http4s")
 
     // Compiler plugins
     val betterMonadicFor = "com.olegpy"    %% "better-monadic-for" % Versions.betterMonadicFor

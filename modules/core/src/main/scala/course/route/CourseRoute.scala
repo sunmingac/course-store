@@ -6,12 +6,20 @@ import org.http4s.dsl._
 import org.http4s._
 import course.model._
 import java.util.UUID
+import sttp.tapir._
+import sttp.tapir.json.circe._
 
 trait CourseRoute[F[_]] {
   def route: HttpRoutes[F]
 }
 
 object CourseRoute {
+
+  val courseById = endpoint
+    .get
+    .in(("course" / path[String]("uuid")))
+    .errorOut(stringBody)
+    .out(jsonBody[Course])
 
   def dsl[F[_]: Sync] =
     new CourseRoute[F] with Http4sDsl[F] {
@@ -23,4 +31,5 @@ object CourseRoute {
             Ok(course)
         }
     }
+
 }

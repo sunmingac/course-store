@@ -26,10 +26,14 @@ object CourseRoute {
   def dsl[F[_]: Sync](implicit C: ContextShift[F]) =
     new CourseRoute[F] with Http4sDsl[F] {
 
-      def routes = NonEmptyChain(
+      def routes =
+        NonEmptyChain(
           routeSwagger,
           routeGetCourse,
-          routeGetCourseInPage
+          routeGetCourseInPage,
+          routeCreateCourse,
+          routeModifyCourse,
+          routeDeleteCourse
         ).reduceLeft(_ <+> _)
 
       private def routeSwagger = {
@@ -54,8 +58,27 @@ object CourseRoute {
               List(c1, c2).asRight[Unit]
             }
         }
-    }
 
+      private def routeCreateCourse =
+        createCourse.toRoutes(course =>
+          Sync[F].delay {
+            Course(UUID.randomUUID(), course.name).asRight[Unit]
+          }
+        )
+
+      private def routeModifyCourse =
+        modifyCourse.toRoutes {
+          case (uuid, course) =>
+            Sync[F].delay {
+              Course(uuid, course.name).asRight[Unit]
+            }
+        }
+
+      private def routeDeleteCourse =
+        deleteCourse.toRoutes { _ =>
+          Sync[F].pure(().asRight[Unit])
+        }
+    }
 }
 
 object CourseEndpoint {
@@ -63,19 +86,45 @@ object CourseEndpoint {
   def allEndpoints =
     List(
       courseById,
-      courseInPage
+      courseInPage,
+      createCourse,
+      modifyCourse,
+      deleteCourse
     )
 
-  val courseById: Endpoint[UUID, Unit, Course, Nothing] = endpoint.get
-    .in(("course" / path[UUID]("uuid")))
-    .out(jsonBody[Course])
+  val courseById: Endpoint[UUID, Unit, Course, Nothing] =
+    endpoint.get
+      .description("Find Course by UUID")
+      .in(("course" / path[UUID]("uuid")))
+      .out(jsonBody[Course])
 
-  val courseInPage: Endpoint[(Int, Int), Unit, List[Course], Nothing] = endpoint.get
-    .in(("course"))
-    .in(
-      query[Int]("page")
-        .description("Page number")
-        .and(query[Int]("limit").description("Number of records per page"))
-    )
-    .out(jsonBody[List[Course]])
+  val courseInPage: Endpoint[(Int, Int), Unit, List[Course], Nothing] =
+    endpoint.get
+      .description("Find Courses")
+      .in(("course"))
+      .in(
+        query[Int]("page")
+          .description("Page number")
+          .and(query[Int]("limit").description("Number of records per page"))
+      )
+      .out(jsonBody[List[Course]])
+
+  val createCourse: Endpoint[CourseWithoutUUID, Unit, Course, Nothing] =
+    endpoint.post
+      .description("Create Course")
+      .in(("course"))
+      .in(jsonBody[CourseWithoutUUID].description("Course Name"))
+      .out(jsonBody[Course])
+
+  val modifyCourse: Endpoint[(UUID, CourseWithoutUUID), Unit, Course, Nothing] =
+    endpoint.put
+      .description("Modify Course")
+      .in(("course" / path[UUID]("uuid")))
+      .in(jsonBody[CourseWithoutUUID].description("Course Name"))
+      .out(jsonBody[Course])
+
+  val deleteCourse: Endpoint[UUID, Unit, Unit, Nothing] =
+    endpoint.delete
+      .description("Delete Course")
+      .in(("course" / path[UUID]("uuid")))
 }

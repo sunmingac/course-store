@@ -20,3 +20,14 @@ https://github.com/tpolecat/skunk
 * Graphql
 * dockerise
 * GCP
+
+
+## How to Run
+
+`sbt core/run`
+
+*Press ENTER to shutdown server*
+
+
+Swagger Documentation
+http://localhost:8080/docs

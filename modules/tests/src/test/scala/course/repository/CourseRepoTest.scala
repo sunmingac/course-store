@@ -33,6 +33,12 @@ class MySuite extends munit.FunSuite {
     assertNotEquals(obtained, expected)
   }
 
+    test("get Courses in Page") {
+    val obtained = courseRepo.getCoursesInPage(0, 2).unsafeRunSync()
+    val expected = List(c1, c2)
+    assertNotEquals(obtained, expected)
+  }
+
   test("Create a TDD Course") {
     val obtained = courseRepo.createCourse("Intro to TDD").unsafeRunSync().name
     val expected = "Intro to TDD"

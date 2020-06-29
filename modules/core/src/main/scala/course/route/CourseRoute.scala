@@ -15,6 +15,7 @@ import sttp.tapir.openapi.OpenAPI
 import sttp.tapir.docs.openapi._
 import sttp.tapir.openapi.circe.yaml._
 import sttp.tapir.swagger.http4s.SwaggerHttp4s
+import course.repository.CourseRepo
 
 trait CourseRoute[F[_]] {
   def routes: HttpRoutes[F]
@@ -23,7 +24,7 @@ trait CourseRoute[F[_]] {
 object CourseRoute {
   import CourseEndpoint._
 
-  def dsl[F[_]: Sync](implicit C: ContextShift[F]) =
+  def dsl[F[_]: Sync](repo: CourseRepo[F])(implicit C: ContextShift[F]) =
     new CourseRoute[F] with Http4sDsl[F] {
 
       def routes =
@@ -42,42 +43,24 @@ object CourseRoute {
       }
 
       private def routeGetCourse =
-        courseById.toRoutes(uuid =>
-          Sync[F].delay {
-            val course = Course(UUID.randomUUID(), s"Data Structures $uuid")
-            course.asRight[Unit]
-          }
-        )
+        courseById.toRoutes(uuid => repo.getCourse(uuid).map(Either.fromOption(_, ())))
 
       private def routeGetCourseInPage =
         courseInPage.toRoutes {
-          case (page, limit) =>
-            Sync[F].delay {
-              val c1 = Course(UUID.randomUUID(), s"Data Structures")
-              val c2 = Course(UUID.randomUUID(), s"Mathmatics $page $limit")
-              List(c1, c2).asRight[Unit]
-            }
+          case (page, limit) => repo.getCoursesInPage(page, limit).map(_.asRight[Unit])
         }
 
       private def routeCreateCourse =
-        createCourse.toRoutes(course =>
-          Sync[F].delay {
-            Course(UUID.randomUUID(), course.name).asRight[Unit]
-          }
-        )
+        createCourse.toRoutes(course => repo.createCourse(course.name).map(_.asRight[Unit]))
 
       private def routeModifyCourse =
         modifyCourse.toRoutes {
           case (uuid, course) =>
-            Sync[F].delay {
-              Course(uuid, course.name).asRight[Unit]
-            }
+            repo.modifyCourse(uuid, Course(uuid, course.name)).map(Either.fromOption(_, ()))
         }
 
       private def routeDeleteCourse =
-        deleteCourse.toRoutes { _ =>
-          Sync[F].pure(().asRight[Unit])
-        }
+        deleteCourse.toRoutes(uuid => repo.deleteCouse(uuid).map(_.asRight[Unit]))
     }
 }
 

@@ -75,7 +75,7 @@ final case class CourseRepoSkunk[F[_]: Sync](session: Session[F]) extends Course
 
   def getCoursesInPage(pageNumber: Int, limitPerPage: Int): F[List[Course]] = {
     val query: Query[Void, Course] =
-      sql"SELECT ID, NAME FROM COURSE ORDER BY ID"
+      sql"SELECT ID, NAME FROM COURSE"
         .query(courseDecoder)
 
     session.execute(query)

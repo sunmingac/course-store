@@ -9,16 +9,15 @@ import org.http4s.implicits._
 import route._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.ExecutionContext
-import course.repository.CourseRepoInMem
-import course.model.Course
-import java.util.UUID
+import course.repository._
 
 object Main extends IOApp {
 
   def run(args: List[String]) = {
 
-    val courseRepo = CourseRepoInMem[IO](scala.collection.mutable.Map[UUID, Course]())
-    
+    // val courseRepo = CourseRepo.courseRepositoryInPostgres[IO]
+    val courseRepo = CourseRepo.courseRepositoryInMemory[IO]
+
     val httpApp: HttpApp[IO] = NonEmptyChain(
       CourseRoute.dsl[IO](courseRepo).routes
     ).reduceLeft(_ <+> _).orNotFound

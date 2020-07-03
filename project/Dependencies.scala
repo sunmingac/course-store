@@ -20,7 +20,8 @@ object Dependencies {
     val skunk         = "0.0.9"
     val squants       = "1.6.0"
     val tapir         = "0.16.1"
-
+    val pureconfig    = "0.13.0"
+    val typesafeConfig   = "1.4.0"
     val betterMonadicFor = "0.3.1"
     val kindProjector    = "0.11.0"
     val logback          = "1.2.3"
@@ -78,9 +79,12 @@ object Dependencies {
     val tapirHttp4sServer = tapir("tapir-http4s-server")
     val tapirJsonCirce = tapir("tapir-json-circe")
     val tapirOpenapiDocs = tapir("tapir-openapi-docs")
-    val tapirCirceYaml= tapir("tapir-openapi-circe-yaml")
-    val tapirSwaggerUiHttp4s= tapir("tapir-swagger-ui-http4s")
-
+    val tapirCirceYaml = tapir("tapir-openapi-circe-yaml")
+    val tapirSwaggerUiHttp4s = tapir("tapir-swagger-ui-http4s")
+    
+    val typesafeConfig = "com.typesafe" % "config" % Versions.typesafeConfig
+    val pureconfig = "com.github.pureconfig" %% "pureconfig" % Versions.pureconfig
+    
     // Compiler plugins
     val betterMonadicFor = "com.olegpy"    %% "better-monadic-for" % Versions.betterMonadicFor
     val kindProjector    = "org.typelevel" % "kind-projector"      % Versions.kindProjector

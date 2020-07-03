@@ -10,7 +10,7 @@ import cats.effect.Resource
 import java.util.UUID
 import cats.effect.Concurrent
 import cats.effect.ContextShift
-import natchez.Trace.Implicits.noop
+import course.Postgres
 
 trait CourseRepo[F[_]] {
   def getCourse(id: UUID): F[Option[Course]]
@@ -23,14 +23,16 @@ trait CourseRepo[F[_]] {
 }
 
 object CourseRepo {
-  def courseRepositoryInPostgres[F[_]: Sync: ContextShift: Concurrent]: CourseRepo[F] = {
+  def courseRepositoryInPostgres[F[_]: Sync: ContextShift: Concurrent](postgresConfig: Postgres): CourseRepo[F] = {
+    import natchez.Trace.Implicits.noop
+
     val resource: Resource[F, Session[F]] =
       Session.single (
-        host = "localhost",
-        port = 5432,
-        user = "postgres",
-        database = "course-store",
-        password = Some("postgres")
+        host = postgresConfig.host,
+        port = postgresConfig.port,
+        user = postgresConfig.user,
+        database = postgresConfig.database,
+        password = Some(postgresConfig.password)
       )
 
     CourseRepoSkunk[F](resource)
@@ -123,7 +125,7 @@ final case class CourseRepoSkunk[F[_]: Sync](resource: Resource[F, Session[F]])
   override def modifyCourse(id: UUID, course: Course): F[Option[Course]] = {
     val update: Command[Course] =
       sql"UPDATE COURSE SET NAME = $varchar WHERE ID = $uuid".command
-        .contramap(c => c.name ~ c.id)
+        .contramap(c => c.name ~ id)
     resource.use(_.prepare(update).use(_.execute(course)))
 
     getCourse(id)

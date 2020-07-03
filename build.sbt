@@ -80,7 +80,10 @@ lazy val core = (project in file("modules/core"))
           Libraries.skunkCore,
           Libraries.skunkCirce,
           Libraries.squants,
-          Libraries.munitTest
+          Libraries.munitTest,
+          Libraries.typesafeConfig,
+          Libraries.pureconfig
         )
   )
+
 

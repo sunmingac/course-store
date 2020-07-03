@@ -15,20 +15,20 @@ object Main extends IOApp {
 
   def run(args: List[String]) =
     for {
-      config        <- Config.appConfig
-      courseRepo    = CourseRepo.courseRepositoryInMemory[IO] // In memory database
+      config    <- Config.appConfig
+      courseRepo = CourseRepo.courseRepositoryInMemory[IO] // In memory database
       // courseRepo = CourseRepo.courseRepositoryInPostgres[IO](config.postgres) //Postgres database
-      httpApp       = NonEmptyChain(
-        CourseRoute.dsl[IO](courseRepo).routes
-      ).reduceLeft(_ <+> _).orNotFound
+      httpApp    = NonEmptyChain(
+                     CourseRoute.dsl[IO](courseRepo).routes
+                   ).reduceLeft(_ <+> _).orNotFound
 
-      _ <- BlazeServerBuilder[IO](global)
-          .bindHttp(config.port, "0.0.0.0")
-          .withHttpApp(httpApp)
-          .serve
-          .compile
-          .drain
-          .pipe(devServer[IO]) // use "devServer" for development, delete this line in production
+      _         <- BlazeServerBuilder[IO](global)
+                     .bindHttp(config.port, "0.0.0.0")
+                     .withHttpApp(httpApp)
+                     .serve
+                     .compile
+                     .drain
+                     .pipe(devServer[IO]) // use "devServer" for development, delete this line in production
     } yield ExitCode.Success
 
   def devServer[F[_]: Concurrent](server: F[Unit]): F[Unit] =
